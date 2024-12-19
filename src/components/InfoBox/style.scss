@@ -1,0 +1,91 @@
+@use "../../assets/styles/index" as *;
+.pd_info_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+
+  &.red {
+    background-color: var(--pastelRed);
+    p {
+      color: var(--error);
+    }
+    .btn {
+      background-color: var(--white);
+      color: var(--grey01);
+    }
+  }
+  &.green {
+    background-color: var(--pastelGreen);
+  }
+  &.yellow {
+    background-color: var(--pastelYellow);
+    p {
+      color: var(--black02);
+    }
+    .btn {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+  }
+  .text_side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+    .title_explanation {
+      width: calc(100% - 34px);
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      word-wrap: break-word;
+      font-weight: 400;
+      color: var(--black01);
+    }
+    p.title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+    p.description {
+      line-height: 20px;
+      word-wrap: break-word;
+      font-weight: 500;
+      color: var(--black01);
+    }
+  }
+  .button_side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    &.no_cancel {
+      @include mq(500px) {
+        width: 100% !important;
+      }
+    }
+
+    .cancel_btn {
+      background: transparent !important;
+    }
+    .btn {
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+      width: 100%;
+      height: 32px;
+      color: var(--white);
+      background-color: var(--black01);
+    }
+  }
+}

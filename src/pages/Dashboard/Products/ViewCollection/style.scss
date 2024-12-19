@@ -1,0 +1,29 @@
+@use "../../../../assets/styles/index" as *;
+.pd_view_collection {
+  .single_collection_information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.large {
+      padding-bottom: 16px;
+      margin-bottom: 26px;
+      border-bottom: 1px solid var(--grey05);
+    }
+    .faint {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--grey01);
+    }
+    .bold {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--black02);
+    }
+  }
+}

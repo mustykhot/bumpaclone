@@ -1,0 +1,22 @@
+@use "../../../../../assets/styles/index" as *;
+
+.pd_withdrawal-modal{
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .loader {
+    animation: spin 1s linear infinite;
+  }
+
+  .manage-withdrawal{
+    color: #009444;
+    font-weight: 500;
+  }
+
+  .remove-account{
+    background-color: #D90429 !important;
+  }
+}
+
+

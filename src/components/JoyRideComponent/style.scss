@@ -1,0 +1,119 @@
+@use "../../assets/styles/index" as *;
+
+.pd_tooltip_card {
+  max-width: 262px;
+  width: 90vw;
+  background: #ffffff;
+  border-radius: 16px;
+  position: relative;
+  padding: 20px;
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--black02);
+  }
+  .description {
+    margin: 12px 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--grey01);
+  }
+  .button_box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .back_btn {
+      background: #eff1f3;
+      color: #5c636d;
+      border: none;
+    }
+    button {
+      height: 36px;
+      width: 80px;
+    }
+  }
+  .closebtn {
+    position: absolute;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    right: -15px;
+    top: -15px;
+    &:hover {
+      background-color: #eff2f6;
+    }
+    svg {
+      width: 20px;
+    }
+  }
+}
+
+.pd_update_tooltip_card {
+  max-width: 350px;
+  width: 90vw;
+  background: #ffffff;
+  border-radius: 16px;
+  position: relative;
+  padding: 0;
+  .header {
+    height: 42px;
+    padding: 10px 20px;
+    background: #eff2f6;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #222d37;
+    }
+  }
+  .main {
+    padding: 10px 20px;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #222d37;
+  }
+  .description {
+    margin: 12px 0 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #5c636d;
+  }
+  .button_box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .back_btn {
+      background: #eff1f3;
+      color: #5c636d;
+      border: none;
+    }
+    button {
+      height: 36px;
+      width: 80px;
+    }
+  }
+  .closebtn {
+    position: absolute;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    right: -15px;
+    top: -15px;
+    &:hover {
+      background-color: #eff2f6;
+    }
+    svg {
+      width: 20px;
+    }
+  }
+}

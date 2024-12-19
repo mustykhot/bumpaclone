@@ -1,0 +1,54 @@
+@use "../../../../../assets/styles/index" as *;
+
+.cancel_verification_modal {
+  @include white_modal_box;
+  max-width: 659px;
+  border-radius: 20px;
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    .text {
+      margin: 25px 0;
+      h2 {
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 36px;
+        color: var(--black01);
+        margin-bottom: 16px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: var(--grey01);
+      }
+    }
+    @include mq(600px) {
+      padding: 20px;
+      .text {
+        h2 {
+          font-size: 24px;
+          line-height: 24px;
+        }
+      }
+    }
+    .button_container {
+        width: 100%;
+        button {
+          margin-bottom: 25px;
+          width: 100%;
+          background-color: var(--error);
+        }
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          color: var(--grey01);
+          cursor: pointer;
+        }
+      }
+  }
+}

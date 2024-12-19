@@ -1,0 +1,17 @@
+@use "../../../../../../../../assets/styles/index" as *;
+
+.pd_customer_pickup {
+  border-top: 1px solid var(--grey04);
+  cursor: pointer;
+  padding: 16px;
+  .chose_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .toggle_flex {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}

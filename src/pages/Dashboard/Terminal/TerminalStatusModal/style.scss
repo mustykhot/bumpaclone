@@ -1,0 +1,48 @@
+@use "../../../../assets/styles/index" as *;
+
+.terminal_status {
+  @include white_modal_box;
+  max-width: 524px;
+  border-radius: 12px;
+  border: 1px solid #EFF2F6;
+  padding: 50px 60px;
+  @include mq(600px) {
+    padding: 20px;
+  }
+  .main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text {
+      margin: 32px 0;
+      h2 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: var(--black02);
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--grey01);
+      }
+    }
+    .button_container {
+      display: flex;
+      gap: 16px;
+      button {
+        margin-bottom: 0;
+        width: 169px;
+      }
+      @include mq(600px) {
+        flex-wrap: wrap;
+        width: 100%;
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

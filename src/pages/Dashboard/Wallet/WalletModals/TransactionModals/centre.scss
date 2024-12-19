@@ -1,0 +1,53 @@
+@use "../../../../../assets/styles/index" as *;
+
+.upload_options{
+    padding-top: 1.3rem !important;
+    .modal_body{
+        margin-top: 3rem  !important;
+    }
+    .action_wrap{
+        width: 100%;
+        margin-top: 1.8rem;
+        .single_action{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--grey07);
+            margin: 0.8rem 0;
+            width: 100%;
+            justify-content: space-between;
+            padding: 1.3rem;
+            border-radius: 16px;
+            cursor: pointer;
+            p{
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--black02);
+            }
+            span{
+                font-size: 14px;
+                font-weight: 400;
+                color: var(--grey01);
+            }
+        }
+                        
+    }
+    .card_wrapper{
+        width: 100%;
+        height: 100%;
+        height: 222px;
+        background: var(--grey05);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .upload_header{
+        font-size: 20px !important; 
+
+    }
+    .supload_p{
+        margin: 0!important;
+        padding-bottom: 0.5rem !important;
+    }
+}

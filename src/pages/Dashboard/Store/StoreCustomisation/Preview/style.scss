@@ -1,0 +1,123 @@
+@use "../../../../../assets/styles/index" as *;
+.pd_preview_theme {
+  position: relative;
+  @include auto_layout;
+  .page_btn_flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include mq(768px) {
+      display: none;
+    }
+    &.image {
+      display: none;
+      @include mq(768px) {
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+    }
+    button {
+      background-color: var(--grey00);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      height: 36px;
+      border: 1.5px solid transparent;
+      transition: 0.3s ease;
+      color: var(--grey01);
+      &.active {
+        color: var(--primary);
+        border-color: var(--primary);
+        background-color: var(--pastelGreen);
+      }
+    }
+  }
+  .image_flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    @include mq(768px) {
+      flex-direction: column-reverse;
+      row-gap: 12px;
+    }
+    .image_box {
+      width: 75%;
+      img {
+        width: 100%;
+      }
+      @include mq(1300px) {
+        width: 65%;
+      }
+      @include mq(900px) {
+        width: 56%;
+      }
+      @include mq(768px) {
+        width: 100%;
+      }
+    }
+    .purchase_container {
+      width: 24%;
+      @include mq(1300px) {
+        width: 34%;
+      }
+      @include mq(900px) {
+        width: 42%;
+      }
+      @include mq(768px) {
+        width: 100%;
+      }
+      .cover_purchase {
+        position: sticky;
+        top: 10px;
+        @include mq(768px) {
+          position: relative;
+          top: unset;
+        }
+      }
+      h3 {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        color: var(--black02);
+      }
+      .price_box {
+        border-radius: 8px;
+        border: 1px solid var(--grey05);
+        background: #fff;
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25),
+          0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+        padding: 16px 14px;
+        margin: 16px 0;
+        p.price {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          color: var(--grey02);
+        }
+        p.amount {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          margin-bottom: 16px;
+          line-height: 28px;
+          color: var(--grey01);
+        }
+        .coupon_box {
+          border-top: 1px solid var(--grey05);
+          padding-top: 16px;
+          label {
+            color: var(--black02) !important;
+            font-weight: 500;
+          }
+        }
+      }
+      .primary_styled_button {
+        width: 100%;
+      }
+    }
+  }
+}

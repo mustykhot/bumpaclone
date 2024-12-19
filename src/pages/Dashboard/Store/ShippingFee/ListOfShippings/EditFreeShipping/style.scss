@@ -1,0 +1,49 @@
+@use "../../../../../../assets/styles/index" as *;
+
+.edit-modal {
+  &__right-title {
+    .text_box {
+      p {
+        font-size: 1.7rem !important;
+      }
+    }
+  }
+
+  &__container {
+    padding: 0rem 2rem 1rem 2rem;
+  }
+
+  .css-ue9e4h-MuiTypography-root {
+    font-size: 0.9rem;
+    @include mq(677px) {
+      font-size: 0.7rem;
+    }
+    color: #222d37;
+  }
+
+  .pd-shipping-input {
+    margin-bottom: 0rem;
+    margin-top: 2rem;
+    input {
+      z-index: 0 !important;
+    }
+  }
+
+  &__footer {
+    @include mq(1200px) {
+      padding: 1rem;
+    }
+
+    div {
+      display: flex;
+      gap: 1rem;
+
+      :first-child {
+        background: var(--white);
+        border-radius: 8px;
+        color: var(--primary);
+        padding: 0.5rem 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+@use "../../../../assets/styles/index" as *;
+
+.create-modal-bottom {
+  .pd-modal_bottom {
+    @include mq(767px) {
+      margin-top: 0rem;
+    }
+   
+
+    .popBoxBottom {
+      padding: 0rem !important;
+    }
+
+    .popBox {
+      padding-bottom: 0px !important;
+      border: none;
+    }
+  }
+
+  .pd_create_order {
+padding-top: 8px;
+    form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .form_section {
+      margin-bottom: 3rem;
+      @include form_section;
+
+      .form_field_container {
+        padding-top: 0;
+      }
+
+      .accordion_sections {
+        .MuiAccordionSummary-expandIconWrapper {
+          transform: none !important;
+        }
+
+        &.pd_product_section {
+          .display_product_flex {
+            gap: 30px;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+
+            @include mq(1200px) {
+              grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+
+            @include mq(700px) {
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            @include mq(600px) {
+              grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .product_listing_container {
+              // max-width: 120px;
+              // width: 18%;
+              width: 100%;
+
+              @include mq(600px) {
+                width: 100%;
+              }
+
+              img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+                height: 100px;
+                border-radius: 4px;
+
+                @include mq(700px) {
+                  height: 120px;
+                }
+              }
+
+              .name {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--black02);
+                margin: 12px 0 4px;
+              }
+
+              .price {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: var(--black02);
+                margin-bottom: 16px;
+              }
+
+              .actions {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .count {
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 24px;
+                  color: var(--black02);
+                }
+
+                button {
+                  padding: 6px;
+
+                  &.primary_btn {
+                    background: var(--primary) !important;
+
+                    svg {
+                      path {
+                        stroke: var(--white);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .select_product {
+            margin-top: 24px;
+            padding: 24px 0;
+            border: 1px solid #eff2f7;
+            border-left: none;
+            border-right: none;
+
+            button {
+              min-width: 130px;
+              height: 44px;
+            }
+          }
+
+          .extra_action {
+            padding: 16px 0;
+            border-bottom: 1px solid #eff2f7;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .action_name {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: var(--black02);
+
+              @include mq(600px) {
+                font-size: 14px;
+              }
+            }
+
+            button {
+              @include mq(600px) {
+                font-size: 14px;
+              }
+
+              svg {
+                transform: rotate(270deg);
+              }
+            }
+          }
+
+          .total {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+
+            p {
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 28px;
+
+              @include mq(600px) {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .submit_form_section {
+      @include submit_form_section;
+    }
+  }
+}

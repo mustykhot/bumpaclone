@@ -1,0 +1,74 @@
+@use "../../assets/styles/index" as *;
+.pd_indicator_component {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  .description {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--grey02);
+    transform: translateY(-3px);
+  }
+  .info_button {
+    padding: 0 !important;
+    transform: translateY(-4px);
+  }
+
+  .indicator_paragraph {
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    color: var(--white) !important;
+  }
+  .drop-down-content {
+    top: -65px;
+    left: -8px;
+    background-color: var(--black02);
+    padding: 6px 8px;
+    border-radius: 8px;
+    transform-origin: bottom left;
+    max-width: 400px;
+    &::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      left: 8px;
+      z-index: -1;
+      bottom: -4px;
+      background-color: var(--black02);
+      transform: skew(180deg, 180deg) rotate(45deg);
+    }
+  }
+  &.right {
+    .drop-down-content {
+      transform-origin: bottom right;
+
+      right: -8px;
+      left: unset;
+      &::before {
+        right: 8px;
+        left: unset;
+      }
+    }
+  }
+  @include mq(600px) {
+    .drop-down-content {
+      max-width: 180px;
+      top: unset;
+      left: 0%;
+      transform-origin: top left;
+
+      &.right {
+        right: 0%;
+        left: unset;
+        transform-origin: top right;
+      }
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

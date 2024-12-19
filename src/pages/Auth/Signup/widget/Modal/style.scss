@@ -1,0 +1,23 @@
+@use "../../../../../assets/styles/index" as *;
+
+.add-modal {
+  &__right-title {
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__container {
+    padding: 0rem 2rem 1rem 2rem;
+  }
+
+  .pd-staff-input {
+    margin-bottom: 0rem;
+    margin-top: 2rem;
+    input {
+      z-index: 0 !important;
+    }
+  }
+}

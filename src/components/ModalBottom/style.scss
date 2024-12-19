@@ -1,0 +1,34 @@
+@use "../../assets/styles/index" as *;
+
+.pd-modal_bottom {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(9, 9, 23, 0.319);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  .popBoxBottom {
+    background: var(--white);
+    overflow-y: auto;
+    @include webkit;
+    position: relative;
+    height: 85vh;
+    width: 100vw;
+    padding: 40px 0;
+    padding-bottom: 0;
+    border: 1px solid #eff2f7;
+    border-radius: 32px 32px 0px 0px;
+    @include mh(600px) {
+      height: 100dvh;
+    }
+    @include mq(600px) {
+      height: 100dvh;
+      border-radius: 0px !important;
+    }
+  }
+}

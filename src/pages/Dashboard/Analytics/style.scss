@@ -1,0 +1,40 @@
+@use "../../../assets/styles/index" as *;
+
+.pd_analytics {
+  @include auto-layout;
+  height: max-content;
+  .title_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    .filter_actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      h5 {
+        font-size: 16px;
+        font-weight: 600;
+        @include mq(550px) {
+          width: 100%;
+        }
+      }
+      .export {
+        min-width: 130px;
+        height: 36px;
+        &.filter {
+          border: 1px solid var(--grey03);
+          color: var(--grey01);
+        }
+      }
+    }
+  }
+  .tab_container {
+    margin: 34px 0 22px;
+    @include tab_button;
+  }
+  .analytics_container {
+  }
+}

@@ -1,0 +1,9 @@
+@use "../../../../../assets/styles/index" as *;
+
+.product_form_modal {
+  overflow-y: auto;
+  max-height: 100dvh;
+  height: 100%;
+  width: 100%;
+  @include webkit;
+}

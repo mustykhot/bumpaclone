@@ -1,0 +1,136 @@
+@use "../../../../assets/styles/index" as *;
+
+.purchase-credit-modal {
+  @include white_modal_box;
+  max-width: 514px;
+  border-radius: 20px;
+
+  @include mq(600px) {
+    padding: 20px;
+  }
+
+  .cancel_section {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+    svg {
+      transform: rotate(180deg);
+    }
+    &.left {
+      justify-content: flex-start;
+    }
+  }
+
+  img.campaign-credit {
+    margin: 0 auto 24px;
+    width: 156px;
+  }
+
+  h3 {
+    font-size: 1.6875em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    color: var(--black01);
+    text-align: center;
+
+    span {
+      color: var(--primary);
+    }
+  }
+
+  .first-step {
+    .description {
+      font-size: 1em;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--grey01);
+      text-align: center;
+
+      &.note {
+        margin-top: 20px;
+      }
+    }
+    .select-purchase {
+      padding-top: 16px;
+      border-top: 1px solid var(--grey05);
+    }
+    .purchase-form {
+      margin-top: 24px;
+
+      .price-container {
+        border-radius: 8px;
+        background: #f9fafb;
+        padding: 16px 24px;
+        margin: 24px 0;
+        .price-header {
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            color: var(--grey01);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+        .price-item {
+          margin-bottom: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &:last-child {
+            margin-bottom: 0;
+          }
+          p {
+            color: var(--black01);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .second-step {
+    .amount-display {
+      margin: 40px 0;
+      padding: 32px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 8px;
+      background-color: var(--grey00);
+      p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        color: var(--grey03);
+        text-align: center;
+
+        &.amount {
+          font-size: 28px;
+          line-height: 32px;
+          color: var(--grey01);
+        }
+      }
+    }
+  }
+
+  button.primary {
+    width: 100%;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

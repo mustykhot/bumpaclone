@@ -1,0 +1,50 @@
+@use "../../../../../assets/styles/index" as *;
+
+.otp-input-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2.5rem;
+    .input-container {
+      width: 4rem;
+      // border: 1.5px solid #e3e3e3;
+      height: 4rem;
+      border-radius: 0.5rem;
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--grey05);
+  
+      &:focus-within {
+        border: 1px solid var(--primary);
+        @apply border-primary;
+      }
+      &.invalid {
+        border: 1px solid var(--error);
+        background-color: var(--pastelRed);
+
+        // @apply border-error;
+      }
+    }
+  
+    input {
+      width: 24px;
+      text-align: center;
+      border: none;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      background-color: transparent;
+      outline: none;
+  
+      &:focus {
+        // border-bottom: 1px solid;
+        @apply border-primary;
+      }
+    }
+  }
+  

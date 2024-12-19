@@ -1,0 +1,92 @@
+@use "../../../assets/styles/index" as *;
+
+.pd_profile {
+  width: 100%;
+  height: 100%;
+  padding-top: 32px;
+
+  .btn_flex {
+    display: flex;
+    gap: 8px;
+  }
+
+  form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .disabled_grey {
+      background-color: var(--grey00);
+    }
+    .top_indicator {
+      margin-top: -1rem;
+      margin-left: 0.9rem;
+      margin-bottom: 1.5rem;
+      a {
+        color: var(--primary);
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+    .social_svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+    }
+
+    .user_image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .user_image_box {
+      label {
+        width: max-content;
+        height: max-content;
+        display: block;
+        background-color: var(--grey00);
+        border-radius: 8px;
+        padding: 9px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--black02);
+        margin-bottom: 24px;
+        width: 200px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .form_section {
+    input:disabled {
+      cursor: not-allowed;
+    }
+
+    @include form_section;
+    padding-bottom: 2rem;
+
+    .form_field_container {
+      padding-top: 0;
+    }
+
+    .password_btn {
+      display: flex;
+
+      button {
+        margin-left: auto;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .submit_form_section {
+    @include submit_form_section;
+  }
+}

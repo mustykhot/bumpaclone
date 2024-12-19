@@ -1,0 +1,49 @@
+@use "../../../../../assets/styles/index" as *;
+
+.bank_wrap{
+    .wallet_bank_body{
+        margin: 0;
+        .bk_main_header{
+            font-size: 20px;
+            font-weight: 500;
+            color: black;
+            margin: 0;
+            padding: 0;
+            margin-top: 1rem;
+        }
+        .bank_header{
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--black02);
+            text-align: left !important;
+            margin-top: 1.8rem;
+            width: 100%;
+        }
+        .action_wrap{
+            width: 100%;
+            .single_action{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: var(--grey07);
+                margin: 0.8rem 0;
+                width: 100%;
+                justify-content: space-between;
+                padding: 1.25rem;
+                border-radius: 20px;
+                p{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: var(--black02);
+                }
+                span{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: var(--grey01);
+                }
+            }
+                            
+        }
+        
+    }
+}

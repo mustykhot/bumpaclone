@@ -1,0 +1,30 @@
+@use "../../assets/styles/index" as *;
+.pd_display_cusomer_group {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  width: 100%;
+  .MuiChip-root,
+  button {
+    height: 36px;
+    &:hover {
+      background: var(--grey05);
+    }
+  }
+  ul.list_group {
+    width: 130px;
+    li {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--grey01);
+      margin-bottom: 16px;
+      text-align: center;
+    }
+  }
+}
+.empty_group_list_display {
+  text-align: center;
+  color: var(--grey01);
+  font-size: 14px;
+}

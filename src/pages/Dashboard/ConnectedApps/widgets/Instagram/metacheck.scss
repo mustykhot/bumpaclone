@@ -1,0 +1,190 @@
+@use "../../../../../assets/styles/index" as *;
+
+.meta_mdl_wrap {
+  width: 514px;
+  max-width: 90%;
+  max-height: 934px;
+  height: 90%;
+  background-color: var(--white);
+  padding: 24px;
+  position: relative;
+  border-radius: 12px;
+  overflow-y: auto;
+  @include webkit;
+  @include mq(640px) {
+    padding: 16px;
+  }
+
+  .close_btn {
+    right: 24px;
+    position: absolute;
+    @include mq(640px) {
+      right: 16px;
+    }
+    &.two_btn {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      position: relative;
+      right: 0;
+    }
+    .back_btn_wrap {
+      border-radius: 8px;
+      background-color: var(--grey00);
+    }
+    .back_btn {
+      margin: 5px;
+    }
+  }
+
+  .details_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    &.second_wrap {
+      height: auto;
+    }
+    @include mq(360px) {
+      height: auto;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 32px;
+      text-align: center;
+      margin: 1rem 0;
+      &.content_h2 {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: 500;
+      }
+      @include mq(640px) {
+        font-size: 24px;
+      }
+    }
+
+    .para {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      color: var(--grey01);
+      width: 90%;
+      margin: auto;
+      margin: 0.5rem auto;
+      &.para_2 {
+        font-size: 14px;
+        width: 100%;
+      }
+    }
+
+    .first_content {
+      @include mq(640px) {
+        margin-top: 2rem;
+      }
+      .bullet_pts {
+        background-color: var(--grey07);
+        padding: 16px;
+        border-radius: 24px;
+        margin: 20px 0;
+        @include mq(640px) {
+          margin: 1.5rem 0;
+          padding: 10px;
+        }
+        ul {
+          list-style: disc;
+          margin: 0 1.5rem;
+
+          li {
+            padding: 0.5rem 0;
+            font-size: 14px;
+            @include mq(640px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .terms_and_condition {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        span {
+          padding: 0;
+        }
+        p {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          color: var(--black02);
+        }
+      }
+      .cnct_meta_btn {
+        width: 100%;
+        background-color: var(--primary);
+        color: var(--white);
+      }
+    }
+    .check_content {
+      .btn_wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0 2rem 0;
+      }
+      .tut_btn {
+        background-color: var(--grey07);
+        padding: 12px 24px;
+        text-align: center;
+        .play_btn {
+          padding-right: 10px;
+        }
+        span {
+          color: var(--black02);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      .checkbox_wrapper {
+        // border: 1px solid red;
+        display: flex;
+        justify-content: flex-start;
+        background-color: var(--grey07);
+        padding: 20px 32px;
+        border-radius: 16px;
+        gap: 1.1rem;
+        margin-bottom: 0.8rem;
+        @include mq(640px) {
+          padding: 10px 16px;
+        }
+        .check_box {
+          align-self: flex-start;
+          padding: 0;
+        }
+        p {
+          padding-bottom: 8px;
+        }
+        a {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 4px;
+          color: var(--primary);
+        }
+      }
+      .cnect_btn {
+        width: 100%;
+        background-color: var(--primary);
+        color: var(--white);
+        margin: 1.5rem 0;
+        &.disabledButton {
+          cursor: not-allowed;
+          background-color: var(--grey04);
+        }
+      }
+    }
+  }
+}

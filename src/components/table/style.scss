@@ -1,0 +1,374 @@
+@use "../../assets/styles/index" as *;
+.table-box {
+  @include webkit;
+}
+.my-table {
+  margin-top: 0;
+  padding-bottom: 10px;
+  overflow-x: unset !important;
+  .MuiTableRow-root {
+    .trash {
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+    &:hover {
+      .text_name {
+        text-decoration: underline;
+      }
+      .trash {
+        opacity: 1;
+      }
+    }
+  }
+  .MuiPaper-root {
+    box-shadow: none;
+    > div:nth-child(2) {
+      gap: 1rem;
+      margin: 0;
+      > div {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &.scrollX {
+    .MuiPaper-root div table {
+      min-width: 1000px;
+    }
+  }
+
+  thead {
+    // th:first-of-type {
+    //   border-radius: 4px 0 0 4px;
+    //   // padding-left: 0;
+    // }
+    th:last-of-type {
+      text-align: left;
+    }
+    th {
+      // border: none;
+      // background-color: #f9f9fb !important;
+      button.MuiButton-root {
+        padding: 0;
+        width: max-content;
+        font-weight: 500;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .MuiTableRow-head {
+    th {
+      background-color: var(--grey00);
+      border-radius: 0 !important;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--grey01);
+      padding: 8px 10px;
+    }
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        background-color: #f9fafb;
+        cursor: pointer;
+      }
+    }
+    td {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--grey01);
+      padding: 8px 10px;
+      &:last-child {
+        text-align: left;
+      }
+    }
+  }
+
+  .MUIDataTableFilterList-root {
+    gap: 0.5rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+  .MuiToolbar-root {
+    padding: 0;
+    flex-wrap: wrap;
+    & > div:nth-child(2) {
+      justify-content: flex-end;
+      display: flex;
+    }
+  }
+  .drop-down-action,
+  .drop-down-wrapper {
+    width: max-content;
+    margin-left: auto;
+  }
+  .search {
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    border-radius: 21px;
+    width: 250px;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 7px 10px;
+    &::placeholder {
+      font-size: 14px;
+      line-height: 21px;
+      color: #adadad;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  tfoot.MuiTableFooter-root {
+    td > div {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    td {
+      padding: 0;
+    }
+    @media (max-width: 500px) {
+      .MuiToolbar-root {
+        justify-content: space-between;
+        width: 100%;
+        .MuiInputBase-root {
+          margin-right: 0;
+        }
+        p {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.active-cell {
+  background-color: #d9dcdf !important;
+}
+.MuiModal-root .MuiPaper-root {
+  fieldset {
+    padding: 1rem;
+  }
+  .MuiGrid-root {
+    min-width: 120px;
+  }
+}
+
+.pagination_flex_container {
+  margin-top: 36px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  .entry {
+    display: flex;
+    align-items: center;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--grey06);
+    }
+    .select_data_count {
+      width: 89px;
+      height: 35px;
+      margin: 0 10px;
+      padding: 6px 14px;
+      border: 2px solid #c1c9d6;
+      border-radius: 5px;
+      fieldset {
+        display: none;
+      }
+      .MuiSelect-select {
+        padding: 0;
+      }
+      .MuiInputBase-root {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.pagination-wrap {
+  .MuiPagination-ul li button {
+    margin: 0;
+    border-radius: 0;
+  }
+  .MuiPagination-ul li div {
+    margin: 0;
+    border-radius: 0;
+    padding: 6px 0;
+  }
+
+  .MuiPagination-ul {
+    background-color: var(--grey05);
+    li {
+      border: 0.5px solid var(--grey04);
+
+      button {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--grey03);
+        &.Mui-selected {
+          color: var(--white);
+          &:hover {
+            background-color: var(--primary);
+          }
+        }
+      }
+      &:first-child {
+        border-right: 0;
+        border-radius: 5px 0px 0px 5px;
+      }
+      &:last-child {
+        border-left: 0;
+        border: 0.5px solid var(--grey04);
+        border-radius: 0px 5px 5px 0px;
+      }
+    }
+  }
+}
+
+.table_section {
+  margin-top: 30px;
+  // .deactivate {
+  //   opacity: 0.4;
+  // }
+  &.tabbed {
+    .table_action_container {
+      border-top-left-radius: 0 !important;
+    }
+  }
+  .table_tab_container {
+    @include table_tab_container;
+  }
+  .table_action_container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    row-gap: 10px;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+    .my-select {
+      @include my-select;
+    }
+    .left_section {
+      @include mq(600px) {
+        width: 100%;
+      }
+      .show_selected_actions,
+      .filter_container {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        align-items: center;
+      }
+      .show_selected_actions {
+        gap: 8px;
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--grey01);
+          margin-right: 16px;
+        }
+        button {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          padding: 8px 10px;
+          color: var(--black02);
+          background-color: var(--grey00);
+          margin-right: 4px;
+          min-width: 96px;
+          height: 32px;
+          &:last-child {
+            margin-right: 0;
+          }
+          svg {
+            width: 20px;
+          }
+        }
+        .greybg_select {
+          background-color: var(--grey00);
+          color: var(--black02);
+          font-weight: 500;
+          height: 36px;
+        }
+      }
+      .filter_container {
+        gap: 8px;
+        button.filter_button {
+          padding: 6px 12px;
+          background-color: var(--grey05);
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          color: var(--grey01);
+          min-width: unset;
+          width: max-content;
+          position: relative;
+          height: 32px;
+          &.active {
+            background-color: var(--grey02);
+            color: var(--white);
+          }
+          &.attention {
+            border: 1px solid #f4a408 !important;
+            background: var(--pastelYellow) !important;
+            color: var(--black01) !important;
+            &.active {
+              background-color: #f4a408 !important;
+              color: var(--white) !important;
+              svg {
+                rect {
+                  fill: var(--white) !important;
+                }
+                path {
+                  fill: #f4a408 !important;
+                }
+              }
+            }
+          }
+          .red_dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: var(--error);
+            border-radius: 50%;
+            top: -4px;
+            right: 1px;
+          }
+        }
+      }
+    }
+    .search_container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      @include mq(600px) {
+        width: 100%;
+      }
+
+      .search_field {
+        @include search_field;
+        margin-bottom: 0;
+
+        .form-group {
+          width: 186px;
+          height: 32px;
+          @include mq(600px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

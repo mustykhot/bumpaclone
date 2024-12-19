@@ -1,0 +1,42 @@
+@use "../../../../assets/styles/index" as *;
+
+
+.pd_share_invoice_modal {
+  height: 100%;
+  .order_container {
+    padding: 0rem 5rem;
+    @include mq(1024px) {
+      padding: 0rem 1rem;
+    }
+    .title_section {
+      @include dashboard_title_section;
+    }
+    .order_name {
+      h4 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--black02);
+      }
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 2px;
+        color: var(--grey01);
+      }
+    }
+  }
+
+  .submit_form_section {
+    @include submit_form_section;
+    
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    .button_container {
+      display: flex;
+      margin-left: auto;
+  }
+  }
+}

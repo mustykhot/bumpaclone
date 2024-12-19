@@ -1,0 +1,55 @@
+@use "../../../../assets/styles/index" as *;
+
+.loading_container {
+  // width: 100%;
+  display: flex;
+}
+.one_loading_box {
+  border-bottom: 1px solid var(--grey05);
+  padding: 16px 0;
+  width: 100%;
+
+  .left_box {
+    width: 90%;
+    height: 300px;
+    margin: 0px !important;
+  }
+
+  .price_box {
+    width: 90%;
+    height: 20px;
+  }
+}
+.customer-section {
+  .cover_customer_select {
+    margin: 16px 0;
+    .pick_cutomer {
+      @include pick_input_type;
+      margin-bottom: 10px;
+    }
+    .extra_message {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      p {
+        width: calc(100% - 15px);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        color: var(--primary);
+      }
+    }
+  }
+}
+#target {
+  // background: lime;
+  width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    height: 3px !important;
+    width: 4px;
+    background: var(--primary);
+  }
+}

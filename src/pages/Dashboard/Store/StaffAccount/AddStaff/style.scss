@@ -1,0 +1,115 @@
+@use "../../../../../assets/styles/index" as *;
+
+.pd_create_staff {
+  width: 100%;
+  height: 100%;
+  padding-top: 32px;
+  form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .add-more {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+    button {
+      width: 30%;
+      color: #d4d7db;
+    }
+
+    hr {
+      border: 1px solid #d4d7db;
+      width: 35%;
+    }
+  }
+
+  .active {
+    hr {
+      border: 1px solid var(--primary);
+    }
+    button {
+      color: var(--primary);
+    }
+  }
+
+  .staff-details {
+    display: flex;
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+
+    h3 {
+      color: var(--black02);
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+
+    &__email-section {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      font-weight: 400;
+      color: #5c636d;
+      font-size: 0.9rem;
+    }
+
+    &__actions {
+      margin-left: auto;
+      display: flex;
+      gap: 1rem;
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .form_section {
+    @include form_section;
+    .form_field_container {
+      padding-top: 0;
+    }
+    .accordion_sections {
+      .MuiAccordionDetails-root {
+        padding: 0rem;
+      }
+      .MuiAccordionSummary-expandIconWrapper {
+        transform: none !important;
+      }
+
+      .permissions-header {
+        color: var(--grey02);
+      }
+      .permissions {
+        padding: 1rem;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 8fr 2fr 2fr;
+        gap: 1rem;
+        border-bottom: 1px solid var(--grey04);
+
+        h5 {
+          font-weight: 500;
+          color: var(--black02);
+          word-break: break-all;
+        }
+        p {
+          color: var(--grey02);
+          word-break: break-all;
+        }
+      }
+      .permissions:last-child {
+        border-bottom: none;
+        padding-bottom: 0rem;
+      }
+    }
+  }
+  .submit_form_section {
+    @include submit_form_section;
+  }
+}

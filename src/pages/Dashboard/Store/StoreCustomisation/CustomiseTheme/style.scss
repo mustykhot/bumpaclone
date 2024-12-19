@@ -1,0 +1,234 @@
+@use "../../../../../assets/styles/index" as *;
+
+.customise-theme {
+  padding: 2rem 12rem;
+  margin-bottom: 1rem;
+  @include mq(1200px) {
+    padding: 2rem 1rem;
+  }
+  position: relative;
+  .favicon_section {
+    padding: 16px 0;
+    padding-top: 24px;
+    h3 {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      color: var(--black02);
+    }
+    p.text {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+      color: var(--grey02);
+    }
+  }
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+      background: var(--grey00);
+      border-radius: 8px;
+      padding: 0.9rem;
+      cursor: pointer;
+    }
+
+    h3 {
+      color: var(--black01);
+      font-weight: 600;
+      font-size: 1.9rem;
+      @include mq(767px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__container {
+    border: 1px solid var(--grey04);
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  &__banner-title {
+    padding: 0.6rem 1rem;
+
+    p.text {
+      background: var(--grey09);
+      border-radius: 8px 8px 0px 0px;
+      color: var(--grey01);
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__upload {
+    margin-top: 0.5rem;
+    padding: 1rem;
+
+    div:first-child {
+      margin-bottom: 1rem;
+
+      p.text {
+        color: var(--grey01);
+      }
+    }
+  }
+
+  &__theme-title {
+    background: var(--grey09);
+    border-radius: 8px 8px 0px 0px;
+    color: var(--grey01);
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  &__theme-container {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    @include mq(767px) {
+      grid-template-columns: 1fr;
+    }
+    gap: 3rem;
+    padding: 1rem;
+  }
+
+  &__theme-brand {
+    background: #eff1f3;
+    border-bottom: 1px solid #d4d7db;
+    border-radius: 8px 8px 0px 0px;
+    padding: 1rem 0rem 0rem 0rem;
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__theme {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    margin-right: 4.5rem;
+    margin-bottom: 1.5rem;
+
+    &--bg {
+      border: none;
+      height: 3.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--white);
+      svg {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  &__actions {
+    margin-top: 0.8rem;
+
+    button {
+      background: var(--grey00);
+      border-radius: 8px;
+      padding: 0.6rem 2rem;
+      text-align: center;
+      color: var(--black02);
+      width: 15rem;
+    }
+  }
+
+  &__switch-area {
+    display: flex;
+    padding: 2rem 1rem;
+    border-bottom: 1px solid #d4d7db;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__switch-label {
+    h3 {
+      color: var(--black02);
+      font-weight: 500;
+      @include mq(767px) {
+        font-size: 0.9rem;
+      }
+    }
+    p {
+      color: var(--grey02);
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      @include mq(767px) {
+        font-size: 0.8rem;
+        word-break: break-all;
+      }
+    }
+  }
+
+  &__switch-component {
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    button {
+      background: var(--white);
+      border: 1.5px solid var(--primary);
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      color: var(--primary);
+      font-weight: 600;
+    }
+  }
+}
+
+.settings-footer {
+  background: var(--black02);
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  position: sticky;
+  bottom: 0;
+  // position: fixed;
+  // left: 254px;
+  // @include mq(1200px) {
+  //   left: 0;
+  //   padding: 1rem;
+  // }
+  // right: 0;
+  // bottom: 0;
+  @include mq(1200px) {
+    padding: 1rem;
+  }
+
+  div {
+    display: flex;
+    gap: 1rem;
+
+    .cancel {
+      background: var(--white);
+      border-radius: 8px;
+      color: var(--primary);
+      padding: 0.5rem 1.5rem;
+    }
+
+    .save {
+      background: var(--primary);
+      border-radius: 8px;
+      color: var(--white);
+      padding: 0.5rem 1.5rem;
+
+      &.Mui-disabled {
+        background-color: var(--grey04) !important;
+        color: var(--white);
+      }
+    }
+  }
+}

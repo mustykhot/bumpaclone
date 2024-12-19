@@ -1,0 +1,30 @@
+@use "../../../../assets/styles/index" as *;
+.pd_create_collection {
+  width: 100%;
+  height: 100%;
+  form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .form_section {
+    @include form_section;
+    .form_field_container {
+      padding-top: 0;
+    }
+  }
+  .submit_form_section {
+    @include submit_form_section;
+  }
+  .collection_details_section {
+    .search_field {
+      @include search_field;
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+    .related_products_container {
+    }
+  }
+}

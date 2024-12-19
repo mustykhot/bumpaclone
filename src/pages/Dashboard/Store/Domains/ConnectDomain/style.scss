@@ -1,0 +1,126 @@
+@use "../../../../../assets/styles/index" as *;
+.pd_connect_domain {
+  width: 100%;
+  max-width: 700px;
+  padding: 32px;
+  margin: auto;
+  .form-group {
+    padding-left: 0;
+  }
+  .url_suffix {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    justify-content: center;
+    background-color: var(--grey05);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--black02);
+  }
+  .connect_description {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 40px 0;
+  }
+  .step_cover_box {
+    width: 100%;
+
+    .step_title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 28px;
+      color: var(--black02);
+      @include mq(600px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+    .step_description {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--black);
+      margin: 16px 0 32px;
+      @include mq(600px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    .copy_ip {
+      border-radius: 8px;
+      padding: 32px 16px;
+      background-color: var(--grey00);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      .ip_text {
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 44px;
+        color: var(--grey01);
+        @include mq(600px) {
+          font-size: 28px;
+          line-height: 34px;
+        }
+      }
+      button {
+        background-color: var(--white);
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        width: 114px;
+        height: 36px;
+      }
+    }
+    .cname_box {
+      border-radius: 8px;
+      background-color: var(--grey00);
+      padding: 16px;
+      width: 100%;
+      .text_flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 12px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        p.light {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          color: var(--grey01);
+          @include mq(500px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        p.bold {
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          color: var(--black02);
+          @include mq(500px) {
+            font-size: 15px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+  .continue_btn {
+    width: 100%;
+    margin-top: 24px;
+    background-color: var(--primary);
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+}

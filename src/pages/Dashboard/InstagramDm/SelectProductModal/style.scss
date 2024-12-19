@@ -1,0 +1,9 @@
+@use "../../../../assets/styles/index" as *;
+
+.product-ig-modal{
+    .pd-modal_right {
+        @include mq(767px) {
+        margin-top: 4rem;
+        }
+    }
+}

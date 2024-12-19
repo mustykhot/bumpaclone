@@ -1,0 +1,125 @@
+@use "../../../../../../assets/styles/index" as *;
+.duplicate_shipping_modal_container {
+  @include white_modal_box;
+  max-width: 616px;
+  .title_section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    margin-bottom: 32px;
+    .text_side {
+      width: 100%;
+      .title_block {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        align-items: center;
+        h4 {
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px;
+          color: var(--black02);
+          margin-bottom: 8px;
+          @include mq(768px) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .explain {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        p {
+          width: calc(100% - 18px);
+
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          color: #767b81;
+        }
+      }
+    }
+  }
+  .cover_container {
+    .single_location {
+      display: flex;
+      width: 100%;
+      margin-bottom: 16px;
+      gap: 10px;
+      align-items: center;
+      p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        color: var(--grey01) !important;
+      }
+      span {
+        padding: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .location_listings {
+    border-radius: 8px;
+    background: #f9fafb;
+    padding: 16px;
+    margin: 32px 0;
+    .single_list {
+      display: flex;
+      margin-bottom: 16px;
+      gap: 8px;
+      align-items: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--grey01);
+      }
+      .icon_btn {
+        padding: 2.5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background-color: var(--white);
+        svg {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+  .button_section {
+    margin-top: 32px;
+    button {
+      width: 100%;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      @include mq(768px) {
+        width: 100%;
+      }
+      &.add {
+        color: var(--white);
+        background-color: var(--primary);
+        &.disable {
+          background: var(--grey04) !important;
+          color: var(--white) !important;
+        }
+      }
+    }
+  }
+}

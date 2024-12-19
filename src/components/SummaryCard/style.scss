@@ -1,0 +1,74 @@
+@use "../../assets/styles/index" as *;
+
+.pd_summary_overview_card {
+  min-width: 192px;
+  border-radius: 8px;
+  padding: 18px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  @include mq(900px) {
+    min-width: unset;
+  }
+  @include mq(750px) {
+    width: 100% !important;
+  }
+
+  &.green {
+    background-color: var(--pastelGreen);
+  }
+
+  &.blue {
+    background-color: var(--pastelBlue);
+  }
+
+  &.yellow {
+    background-color: var(--pastelYellow);
+  }
+
+  &.red {
+    background-color: var(--pastelRed);
+  }
+
+  &.clear {
+    background-color: transparent;
+    border: 1px solid #d4d7db;
+  }
+
+  &.default {
+    background-color: var(--grey05);
+  }
+
+  .text_box {
+    h3 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: var(--black02);
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: var(--black02);
+      margin-top: 4px;
+    }
+  }
+
+  .icon_box {
+    border-radius: 8px;
+    background: var(--white);
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 24px;
+    }
+  }
+}

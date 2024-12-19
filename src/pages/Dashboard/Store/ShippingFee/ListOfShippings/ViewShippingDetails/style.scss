@@ -1,0 +1,68 @@
+@use "../../../../../../assets/styles/index" as *;
+
+.edit-modal {
+  &__right-title {
+    .text_box {
+      p {
+        font-size: 1.7rem !important;
+      }
+
+      .edit {
+        background: var(--white);
+        border: 1.5px solid var(--primary);
+        border-radius: 8px;
+        padding: 0.4rem 1rem;
+      }
+    }
+  }
+
+  &__container {
+    padding: 0rem 2rem 1rem 2rem;
+  }
+
+  &__value {
+    display: flex;
+    padding: 1.5rem 0rem;
+    border-bottom: 1px solid var(--grey05);
+
+    &--left-align {
+      font-weight: 400;
+      color: var(--grey01);
+    }
+
+    &--right-align {
+      margin-left: auto;
+      font-weight: 500;
+      color: var(--black02);
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    margin-top: 2rem;
+
+    :first-child {
+      font-weight: 400;
+      color: var(--grey01);
+    }
+
+    :last-child {
+      font-weight: 500;
+      color: var(--black02);
+      margin-top: 1rem;
+    }
+  }
+
+  &__footer {
+    @include mq(1200px) {
+      padding: 1rem;
+    }
+
+    div {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}

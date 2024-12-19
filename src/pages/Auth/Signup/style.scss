@@ -1,0 +1,71 @@
+@use "../../../assets/styles/index" as *;
+
+.pd_signup {
+  .progress_bar_container {
+    margin-top: 32px;
+    width: 80%;
+    @include mq(1250px) {
+      width: 100%;
+    }
+    .progress_bar {
+      background-color: #eff2f7;
+      width: 100% !important;
+    }
+  }
+  .form_container {
+    width: 100%;
+    @include mq(1250px) {
+      width: 100%;
+    }
+    .step_container {
+      width: 60%;
+      @include mq(1250px) {
+        width: 100%;
+      }
+    }
+    .back_container {
+      .back_icon {
+        background: var(--grey00);
+        border-radius: 8px;
+        padding: 16px 14px;
+      }
+    }
+    .button_section {
+      @include button_section;
+      p {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--black02);
+        a {
+          font-weight: 500;
+          line-height: 24px;
+          margin-left: 5px;
+        }
+        span {
+          font-weight: 500;
+          color: var(--primary);
+          margin-left: 5px;
+          &.resend {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  &_success {
+    height: 100dvh;
+    img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+    .empty_btn_box {
+      gap: 10px;
+      button {
+        width: 450px;
+      }
+    }
+  }
+}

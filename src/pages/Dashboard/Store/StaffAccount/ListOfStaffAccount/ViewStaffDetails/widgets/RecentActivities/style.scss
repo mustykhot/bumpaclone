@@ -1,0 +1,50 @@
+@use "../../../../../../../../assets/styles/index" as *;
+
+.recent-activities {
+  @include webkitnone;
+
+  .staff-today-activities-details {
+    height: 30rem;
+    overflow-y: auto;
+    @include webkitnone;
+  }
+
+  .accordion {
+    margin-bottom: 4px;
+    box-shadow: none;
+  }
+  .accordion_summary {
+    @include accordion_summary;
+    cursor: none;
+  }
+  .MuiAccordionSummary-expandIconWrapper {
+    transform: none !important;
+  }
+  .Mui-expanded {
+    cursor: default;
+  }
+  .MuiAccordionDetails-root {
+    padding: 0px;
+  }
+
+  .chevron-up {
+    transform: rotate(180deg);
+  }
+
+  .records {
+    display: flex;
+    border-bottom: 1px solid var(--grey05);
+    padding: 0.9rem;
+
+    :first-child {
+      font-weight: 500;
+    }
+
+    :last-child {
+      margin-left: auto;
+    }
+  }
+  .skeleton {
+    padding: 1rem;
+  }
+}

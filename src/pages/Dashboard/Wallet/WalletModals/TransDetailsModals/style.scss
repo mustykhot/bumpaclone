@@ -1,0 +1,69 @@
+@use "../../../../../assets/styles/index" as *;
+
+.trans_details {
+    .trans_btn {
+        width: 100%;
+    }
+
+    .trans-success {
+        background-color: var(--grey05);
+
+        h2 {
+            color: black;
+        }
+    }
+
+    .trans-failed {
+        background-color: #FBE6EA;
+
+        h2 {
+            color: #D90429;
+        }
+    }
+
+    .trans_wrap {
+
+        padding: 1.5rem 1rem;
+        border-radius: 16px;
+        text-align: center;
+
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            color: black;
+        }
+
+        h2 {
+            font-weight: 500;
+            font-size: 26px;
+        }
+    }
+
+    .trans_dets_table {
+        margin: 1.2rem 0;
+
+        .single_transaction {
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--grey05);
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                color: var(--grey01);
+            }
+
+            h2 {
+                font-weight: 500;
+                font-size: 14px;
+                color: var(--black02);
+
+                .transchip {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+}

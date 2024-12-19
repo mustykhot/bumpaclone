@@ -1,0 +1,82 @@
+@use "../../../../assets/styles/" as *;
+
+.pd_new_customer_group {
+  .form_section {
+    .form_field_container {
+      padding-top: 0 !important;
+      overflow: hidden;
+    }
+    .cover_customer_select {
+      margin: 16px 0;
+      .pick_cutomer {
+        @include pick_input_type;
+        margin-bottom: 10px;
+      }
+      .extra_message {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        p {
+          width: calc(100% - 15px);
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
+.pd_select_customer_modal_box {
+  .checkbox_of_customers {
+    align-items: flex-start !important;
+    width: 100%;
+    > span {
+      padding-top: 3px;
+    }
+    .text_name_box {
+      display: flex;
+      align-items: flex-start;
+      .flex {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        .warning_icon {
+          margin-bottom: 8px;
+        }
+      }
+      .name {
+        margin-bottom: 8px;
+      }
+      .chips {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+      .chip {
+        padding: 4px 12px;
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    .disabled_edit {
+      background-color: #eff1f3;
+      padding: 0px;
+      margin-right: 0;
+      display: flex;
+      margin-left: auto;
+      color: #5c636d;
+    }
+  }
+  .top_section {
+    .search_field_box {
+      margin-top: 20px;
+      .search_field {
+        @include search_field;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.pd_email_verify_page {
+  .load_text {
+    font-size: 24px;
+    text-align: center;
+    color: var(--grey01);
+    font-weight: 600;
+    margin-top: 100px;
+  }
+  .primary_styled_button {
+    width: 220px;
+    height: 40px;
+    svg {
+      width: unset !important;
+      height: unset !important;
+      margin: unset !important;
+    }
+    span {
+      font-weight: unset !important;
+      font-size: unset !important;
+      line-height: unset !important;
+    }
+  }
+}

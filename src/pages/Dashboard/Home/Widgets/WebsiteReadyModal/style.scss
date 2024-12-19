@@ -1,0 +1,97 @@
+@use "../../../../../assets/styles/index" as *;
+
+.website_ready_modal {
+  max-width: 514px;
+  width: 90%;
+  max-height: 90vh;
+  padding: 32px;
+  overflow-y: auto;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px #0000000d;
+  box-shadow: 0px 0px 2px 0px #00000040;
+  @include webkit;
+  .lottie_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .title_section {
+    margin-bottom: 32px;
+    gap: 8px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .icon_button_container {
+      background: var(--grey00) !important;
+    }
+  }
+  .image_section {
+    display: flex;
+    justify-content: center;
+  }
+  .text_section {
+    text-align: center;
+    h2 {
+      font-weight: 600;
+      font-size: 27px;
+      line-height: 36px;
+      color: var(--black01);
+    }
+    .link {
+      background: #f8f8f8f8;
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 16px 0;
+      text-align: center;
+      gap: 8px;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--black02);
+        margin: 0 8px;
+        &.copy {
+          color: var(--primary);
+          margin: 0;
+          padding: 4px;
+          background-color: var(--white);
+          border-radius: 4px;
+          border: 1px solid var(--grey05);
+          cursor: pointer;
+        }
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--grey01);
+    }
+  }
+  .button_container {
+    width: 100%;
+    margin-top: 20px;
+    button {
+      width: 100%;
+      margin: 7px 0;
+      &.customise {
+        border: 1.5px solid var(--primary);
+      }
+    }
+  }
+}

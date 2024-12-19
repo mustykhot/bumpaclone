@@ -1,0 +1,86 @@
+@use "../../../../../../../../assets/styles/index" as *;
+
+.pd_automate_shipping {
+  border-top: 1px solid var(--grey04);
+  border-bottom: 1px solid var(--grey04);
+
+  .accordion {
+    @include resetAccordion;
+    .accordion_summary {
+      .content_header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        img {
+          width: 40px;
+        }
+      }
+    }
+
+    .choose_flex {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      cursor: pointer;
+    }
+    .default-weight {
+      padding: 16px 0;
+      .form-group-wrapper {
+        margin-top: 14px;
+        .form-group {
+          height: 48px;
+        }
+      }
+    }
+    .pickup_or_dropoff {
+      .pickup_or_dropoff_select {
+        margin-top: 16px;
+        display: flex;
+        gap: 8px;
+        .singlePickOption {
+          border-radius: 8px;
+          border: 1px solid var(--grey04);
+          gap: 8px;
+          padding: 12px 20px;
+          display: flex;
+          transition: 0.3s ease;
+          cursor: pointer;
+          &.active {
+            border-color: var(--primary);
+            background: var(--pastelGreen);
+          }
+          > span {
+            padding: 0;
+          }
+          p {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            color: var(--black02);
+          }
+        }
+      }
+      .indicate_pickup {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-top: 16px;
+        svg {
+          flex-shrink: 0;
+        }
+        p {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          color: var(--grey02);
+          span {
+            font-weight: 500;
+            color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}

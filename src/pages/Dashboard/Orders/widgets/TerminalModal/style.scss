@@ -1,0 +1,62 @@
+@use "../../../../../assets/styles/index" as *;
+
+.pd_terminal_modal_container {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  z-index: 300;
+  border-radius: 24px;
+  border: 1px solid var(--grey04);
+  background: var(--white);
+  box-shadow: 0px 9.032px 50.579px 0px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(9.888862609863281px);
+  max-width: 376px;
+  width: 80%;
+  @include mq(780px) {
+    width: 90%;
+    right: 10px;
+  }
+  .cover_update_container {
+    position: relative;
+    padding: 16px;
+    .cancel_box {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: -18px;
+      border-radius: 50%;
+      left: -20px;
+      background-color: var(--white);
+    }
+    .image_box {
+      width: 100%;
+      border-radius: 12px;
+      height: 183px;
+      object-fit: cover;
+      object-position: center;
+    }
+    .text_section {
+      margin-top: 24px;
+      width: 100%;
+      h4 {
+        font-style: normal;
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 500;
+        color: var(--black);
+        margin-bottom: 8px;
+      }
+      p {
+        font-style: normal;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: var(--grey01);
+      }
+    }
+    .primary_styled_button {
+      width: 100%;
+      margin-top: 36px;
+    }
+  }
+}

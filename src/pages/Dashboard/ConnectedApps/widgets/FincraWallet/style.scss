@@ -1,0 +1,18 @@
+@use "../../../../../assets/styles/index" as *;
+.pocket_wrap{
+    width: 514px;
+    height: 586px;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+}
+
+.close_btn{
+    position: absolute;
+    right: 16px;
+}
+.back_btn_wrap{
+    background-color: var(--grey00);
+    border-radius: 8px;
+}

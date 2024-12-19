@@ -1,0 +1,188 @@
+@use "../../../../assets/styles/index" as *;
+
+.general-settings-container {
+  @include auto_layout;
+
+  .page-title {
+    margin-bottom: 28px;
+
+    h3 {
+      color: var(--black01);
+      font-size: 1.75em;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 2em;
+    }
+
+    p {
+      color: var(--grey01);
+      font-size: 1em;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  .tab-container {
+    @include tab_button;
+    border-bottom: 1px solid var(--grey04);
+    .MuiBox-root {
+      border-bottom: none !important;
+      width: 100%;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+  }
+
+  .display-pages {
+    margin: 32px auto 0;
+    width: 100%;
+    max-width: 780px;
+  }
+
+  .section {
+    padding: 16px;
+    border-bottom: 1px solid var(--grey04);
+    &:last-child {
+      border-bottom: 0;
+    }
+    .title_description_section {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      .text_section {
+        margin-bottom: 16px;
+        p.title {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          color: var(--black02);
+        }
+        p.description {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          color: var(--grey02);
+        }
+      }
+      .pd_toggle {
+        flex-shrink: 0;
+      }
+    }
+  }
+  .image-upload-container {
+    .uploaded-image-container {
+      @include uploaded-image-container;
+    }
+  }
+  .section_accordion {
+    background-color: none !important;
+    box-shadow: none !important;
+  }
+  .MuiAccordionSummary-expandIconWrapper {
+    transform: none !important;
+  }
+  .MuiAccordionDetails-root {
+    padding: 0 !important;
+  }
+  .MuiAccordionSummary-content {
+    margin: 0 !important;
+  }
+  .MuiAccordionSummary-root {
+    padding: 0 !important;
+  }
+}
+
+.automated_shipping_modal {
+  .modal_description {
+    color: var(--black02) !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 20px !important;
+  }
+
+  &.pickup_modal {
+    .display_pickup_location {
+      padding: 0 32px;
+      .location_container {
+        padding: 16px;
+        border-radius: 8px;
+        background: #f9f9f9;
+        .store_location {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          color: var(--black02);
+          margin-bottom: 10px;
+        }
+        .listed_locations {
+          .single_dispatch_location {
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #efefef;
+            &:last-child {
+              border-bottom: none;
+            }
+            p {
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px;
+              color: var(--grey01);
+              &.bold {
+                color: var(--black02);
+                font-weight: 500;
+              }
+            }
+            button {
+              border-radius: 4px;
+              background: var(--white);
+              width: 24px;
+              height: 24px;
+              padding: 0;
+              svg {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.create_pickup_modal {
+    .pickup_form {
+      padding: 0 32px;
+    }
+  }
+  &.location_modal {
+    .location_toggle_section {
+      padding: 0 32px;
+      .single_location_section {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--grey05);
+        &.accordion {
+          @include resetAccordion;
+          margin-top: 0;
+          .accordion_summary {
+            margin-bottom: 0;
+          }
+          .form-group-wrapper {
+            margin-bottom: 0;
+            margin-top: 20px;
+          }
+        }
+        &.flex_box {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

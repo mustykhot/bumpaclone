@@ -1,0 +1,45 @@
+@use "../../assets/styles/index" as *;
+.pd_toggle {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  span {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--grey04);
+    transition: 0.3s;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    &:before {
+      position: absolute;
+      content: "";
+      height: 15px;
+      width: 15px;
+      left: 3px;
+      //   bottom: 2.6px;
+      background-color: var(--white);
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+  }
+
+  input:checked + span {
+    background-color: #00c853;
+  }
+
+  input:checked + span:before {
+    transform: translateX(12px);
+  }
+}

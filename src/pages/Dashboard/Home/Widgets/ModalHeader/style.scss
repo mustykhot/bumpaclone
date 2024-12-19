@@ -1,0 +1,92 @@
+@use "../../../../../assets/styles/index" as *;
+.modal_header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: space-between;
+  @include mq(600px) {
+    align-items: unset;
+    flex-direction: column;
+  }
+  .back_button {
+    display: flex;
+    align-items: center;
+    p {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 32px;
+      color: var(--black);
+      margin-left: 24px;
+      @include mq(700px) {
+        font-size: 18px;
+      }
+    }
+    span {
+      margin-left: 24px;
+      color: var(--grey01);
+      margin-top: 10px;
+      display: block;
+    }
+
+    @include mq(600px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  .video {
+    background: #eff1f3 !important;
+    color: var(--black02);
+    padding: 12px 24px;
+    @include mq(600px) {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+  .action_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    row-gap: 10px;
+    @include mq(600px) {
+      justify-content: space-between;
+    }
+    button {
+      min-width: 150px;
+      height: 36px;
+      &.grey_btn {
+        background: #eff1f3;
+        color: var(--black02);
+      }
+      @include mq(600px) {
+        width: 48%;
+      }
+      @include mq(400px) {
+        width: 100%;
+      }
+
+      &.edit {
+        @include mq(600px) {
+          width: unset;
+          flex-grow: 1;
+        }
+        @include mq(400px) {
+          width: unset;
+          flex-grow: 1;
+        }
+      }
+      &.icon_button_container {
+        min-width: unset;
+        @include mq(600px) {
+          width: unset;
+        }
+        @include mq(400px) {
+          width: unset;
+        }
+      }
+    }
+  }
+}

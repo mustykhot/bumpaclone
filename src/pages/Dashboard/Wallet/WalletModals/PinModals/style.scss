@@ -1,0 +1,125 @@
+@use "../../../../../assets/styles/index" as *;
+.pin_wrap{
+    width: 514px;
+    min-height: 686px;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+
+    .success_pin_wrap{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .close_btn{
+        position: absolute;
+        right: 32px;
+    }
+    .back_btn_wrap{
+        background-color: var(--grey00);
+        border-radius: 8px;
+    }
+    .modal_body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        &.sucess_body{
+            // background-color:  red !important;
+            height: 95%;
+            box-sizing: border-box;
+            &.sucess_limit{
+                height: 90%;
+            }
+            .new_limit_wrap{
+                margin: 1rem 0;
+                background: var(--grey05);
+                padding: 24px 16px;
+                border-radius: 16px;
+                width: 75%;
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                flex-direction: column;
+                span{
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                h4{
+                    font-size: 26px;
+                    font-weight: 500;
+                }
+            }
+        }
+        &.limit_body{
+            p{
+               font-weight: 400; 
+               font-size: 14px;
+               color: var(--black02);
+               margin: 2rem 0;
+               background-color: var(--grey05);
+               border-radius: 8px;
+               padding: 12px;
+            }
+          
+            .input_wrapper{
+                width: 95%;
+                .limit_input{
+                width: 100%;
+                }
+                .amount_error{
+                    margin-top: -10px;
+                }
+            }
+            
+        }
+        .modal_error{
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--error);
+            margin-top: -2rem;
+            margin-bottom: 1.7rem;
+        }
+        h3{
+            font-weight: 500;
+            font-size: 20px;
+            color: var(--black02);
+            &.success_pin{
+                font-size: 27px;
+                font-weight: 600;
+            }
+        }
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--grey08);
+            padding: 4px 0;
+            &.success_p{
+                font-size: 16px;
+                margin: 8px 0;
+            }
+
+        }
+        .button_section{
+            width: 95%;
+            margin-top: 1.5rem;
+        }
+        .pin_btn{
+            width: 95%;
+            color: var(--white);
+            font-weight: 500;
+            font-size: 14px;
+            &.btn_disabled{
+                background: var(--grey04);
+            }
+            &.pin_suucess_btn{
+                margin-top: 1rem;
+            }
+
+        }
+    }
+}

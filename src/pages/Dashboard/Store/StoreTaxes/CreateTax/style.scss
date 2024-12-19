@@ -1,0 +1,37 @@
+@use "../../../../../assets/styles/index" as *;
+
+.pd_create_tax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .web-checkout {
+    .MuiFormControlLabel-label {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      color: var(--black02);
+    }
+  }
+  .form_section {
+    @include form_section;
+    .form_field_container {
+      padding-top: 0;
+    }
+  }
+  .submit_form_section {
+    @include submit_form_section;
+  }
+
+  .pd-tax-input {
+    input {
+      z-index: 0 !important;
+    }
+  }
+}

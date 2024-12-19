@@ -1,0 +1,205 @@
+@use "../../../../assets/styles/index" as *;
+
+.cac_modal {
+  @include white_modal_box;
+  max-width: 659px;
+  border-radius: 20px;
+  @include mq(600px) {
+    padding: 20px;
+  }
+  .back_section {
+    width: 100%;
+    margin-bottom: 20px;
+    .back_btn_wrap {
+      background-color: var(--grey00);
+      border-radius: 8px;
+    }
+  }
+  .cancel_section {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .powered-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    gap: 8px;
+    @include mq(600px) {
+      margin-top: 35px;
+    }
+  }
+  .main {
+    padding: 0 70px;
+    .MuiStepLabel-alternativeLabel {
+      span.step {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 16px;
+        color: var(--grey03);
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--grey08);
+      }
+      span.status {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 16px;
+        color: var(--grey02);
+        &.in-progress {
+          color: var(--yellow);
+        }
+        &.completed {
+          color: var(--primary);
+        }
+      }
+    }
+    @include mq(600px) {
+      padding: 0;
+    }
+  }
+  .box {
+    margin-top: 32px;
+    text-align: center;
+    &--header {
+      h2 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: var(--black02);
+      }
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--grey08);
+      }
+    }
+    &--form {
+      margin: 32px 0;
+      input {
+        &:disabled {
+          color: var(--black01);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+  .image_preview {
+    margin: 24px 0;
+    padding: 36px;
+    background-color: var(--black01);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .custom-file-input {
+    width: 100%;
+    button {
+      width: 100%;
+      height: 58px;
+      span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--black02);
+        margin-left: 8px;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--grey01);
+      text-align: left;
+      margin-top: 8px;
+    }
+  }
+  .uploaded-input {
+    background-color: var(--grey05);
+    border-radius: 8px;
+    min-height: 58px;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    &__one {
+      display: flex;
+    }
+    svg {
+      flex-shrink: 0;
+    }
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--black02);
+      margin-left: 8px;
+      span {
+        color: var(--grey02);
+      }
+    }
+  }
+  .button_container {
+    width: 100%;
+    button {
+      margin-bottom: 25px;
+      width: 100%;
+      &.try {
+        margin-bottom: 12px;
+      }
+    }
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--grey01);
+      cursor: pointer;
+    }
+    @include mq(600px) {
+      button {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &.success {
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 100px;
+      .text {
+        margin: 25px 0;
+        h2 {
+          font-weight: 600;
+          font-size: 27px;
+          line-height: 36px;
+          color: var(--black01);
+          margin-bottom: 16px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: var(--grey01);
+        }
+      }
+      @include mq(600px) {
+        padding: 20px;
+        .text {
+          h2 {
+            font-size: 24px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

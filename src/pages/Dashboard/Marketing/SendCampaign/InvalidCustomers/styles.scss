@@ -1,0 +1,73 @@
+@use "../../../../../assets/styles/" as *;
+.invalid_customers_wrap {
+  width: 514px;
+  height: 516px;
+  background-color: var(--white);
+  border-radius: 12px;
+  position: relative;
+
+  @include mq(640px) {
+    width: 90%;
+    height: 80%;
+  }
+  .back_btn_wrap {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 10px;
+    background-color: #eff1f3;
+  }
+  .modal_body {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    height: 90%;
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 1rem;
+      @include mq(640px) {
+        font-size: 20px;
+        margin-bottom: 0.5rem;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #222d37;
+      width: 95%;
+      margin: auto;
+    }
+    .name_lists {
+      background-color: var(--grey09);
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+      max-height: 260px;
+      overflow-y: scroll;
+      padding-left: 16px;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      @include webkit;
+      li {
+        margin: 1rem 0;
+      }
+    }
+    .proceed_invalid {
+      background-color: var(--primary);
+      width: 100%;
+      margin-top: auto;
+      color: var(--white);
+    }
+    .loading_state {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+  }
+}

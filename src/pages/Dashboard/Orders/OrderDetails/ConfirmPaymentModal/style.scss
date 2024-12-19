@@ -1,0 +1,54 @@
+@use "../../../../../assets/styles/index" as *;
+.confirm_payment_modal {
+  border-radius: 8 !important;
+  height: 90vh !important;
+  max-height: 600px !important;
+  .top_side {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid var(--grey04);
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+  .mid_side {
+    width: 100%;
+    padding: 0 5%;
+    margin: auto;
+    height: 300px;
+    border-radius: 4px;
+    overflow: auto;
+    @include webkit;
+    img {
+      width: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .bottom_side {
+    border-top: 1px solid var(--grey04);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    button {
+      flex: 1;
+      @include mq(460px) {
+        width: 100%;
+        flex: unset;
+      }
+      &.error {
+        background-color: var(--white);
+        color: var(--error);
+        border: 1px solid var(--error);
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../../../../../../../../assets/styles/index" as *;
+
+.recent-activities {
+  .staff-today-activities-details {
+    height: 30rem;
+    overflow-y: auto;
+    @include webkit;
+  }
+
+  .accordion {
+    margin-bottom: 4px;
+    box-shadow: none;
+  }
+  .accordion_summary {
+    @include accordion_summary;
+    // position: fixed;
+  }
+  .MuiAccordionSummary-expandIconWrapper {
+    transform: none !important;
+  }
+  .MuiAccordionDetails-root {
+    padding: 0px;
+  }
+
+  .login-activities {
+    border-bottom: 1px solid var(--grey05);
+    padding: 0.9rem;
+
+    :first-child {
+      font-weight: 500;
+    }
+  }
+  .skeleton{
+    padding: 1rem;
+  }
+}

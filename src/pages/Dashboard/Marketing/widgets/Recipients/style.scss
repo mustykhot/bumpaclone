@@ -1,0 +1,61 @@
+@use "../../../../../assets/styles/index" as *;
+.pd_recipient {
+  .recipient_body {
+    padding: 0 32px;
+    .search_field {
+      @include search_field;
+    }
+    .filter_container {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      button {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 6px 12px;
+        color: var(--grey01);
+        min-width: unset;
+        width: max-content;
+        height: 40px;
+        background-color: var(--grey05);
+        &.active {
+          background-color: var(--grey02);
+          color: var(--white);
+        }
+      }
+    }
+    .reciepient_list_container {
+      margin-top: 10px;
+      .single_recipient {
+        display: flex;
+        align-items: flex-start;
+        padding: 24px 0 16px;
+        border-bottom: 1px solid var(--grey05);
+        justify-content: space-between;
+        .text_section {
+          display: flex;
+          gap: 8px;
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--black02);
+            &.email {
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 16px;
+              color: var(--grey01);
+              margin-top: 4px;
+            }
+          }
+        }
+        .status {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+      }
+    }
+  }
+}

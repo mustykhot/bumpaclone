@@ -1,0 +1,21 @@
+@use "../../../assets/styles/index" as *;
+
+.pd_customers {
+  @include auto_layout;
+  .summary_section {
+    @include summary_section;
+    .pd_summary_overview_card {
+      width: unset;
+    }
+  }
+  .customers_container {
+    .title_section {
+      @include dashboard_title_section;
+    }
+    .inner_name {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}

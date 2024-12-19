@@ -1,0 +1,11 @@
+@use "../../../../../assets/styles/index" as *;
+.pd_select_customer_modal_box {
+  .top_section {
+    .search_field_box {
+      margin-top: 20px;
+      .search_field {
+        @include search_field;
+      }
+    }
+  }
+}

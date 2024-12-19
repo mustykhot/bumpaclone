@@ -1,0 +1,52 @@
+@use "../../../../../assets/styles/index" as *;
+.book-pickup-modal {
+  @include webkit;
+  overflow-y: auto;
+  border-radius: 8 !important;
+  height: 90vh !important;
+  max-height: 450px !important;
+  display: unset !important;
+  text-align: unset !important;
+
+  .top_side {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    .title-container {
+      h3 {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+        color: var(--grey01);
+      }
+    }
+  }
+  .middle_side {
+    .partner-container {
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        color: #5c636d;
+      }
+    }
+    .select-location-container {
+      margin: 20px 0;
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        color: #5c636d;
+      }
+    }
+  }
+  .bottom_side {
+    width: 100%;
+    button {
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+}

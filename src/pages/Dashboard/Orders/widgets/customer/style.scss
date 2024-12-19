@@ -1,0 +1,37 @@
+@use "../../../../../assets/styles/index" as *;
+.pd_select_customer_modal_box {
+  .checkbox_of_customers {
+    align-items: flex-start !important;
+    > span {
+      padding-top: 3px;
+    }
+    .text_name_box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .name {
+        margin-bottom: 8px;
+      }
+      .chips {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+      .chip {
+        padding: 4px 12px;
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .top_section {
+    .search_field_box {
+      margin-top: 20px;
+      .search_field {
+        @include search_field;
+      }
+    }
+  }
+}

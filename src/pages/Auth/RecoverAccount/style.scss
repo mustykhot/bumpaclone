@@ -1,0 +1,44 @@
+@use "../../../assets/styles/index" as *;
+
+.pd_recover_account {
+    width: 100%;
+    .form_container {
+      width: 70%;
+      margin-top: 90px;
+      @include mq(1250px) {
+        width: 100%;
+      }
+      @include mq(600px) {
+        margin-top: 40px;
+      }
+      .forgot_password_section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 18px 0 34px;
+        .checkbox_section {
+          display: flex;
+          align-items: center;
+          span {
+            padding: 0;
+          }
+          p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            margin-left: 8px;
+            color: var(--black02);
+          }
+        }
+        a {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--primary);
+        }
+      }
+      .button_section {
+        @include button_section;
+      }
+    }
+  }

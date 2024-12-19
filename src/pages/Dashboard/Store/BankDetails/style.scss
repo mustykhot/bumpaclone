@@ -1,0 +1,25 @@
+.pd_bank_details {
+    .note {
+        display: flex;
+        align-items: center;
+        background-color: var(--grey00);
+        padding: 10px;
+        border-radius: 8px;
+        gap: 10px;
+        margin-bottom: 30px;
+        span {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--grey01);
+            a {
+                font-weight: 500;
+                line-height: 24px;
+                color: var(--primary);
+            }
+        }
+        svg {
+            flex-shrink: 0;
+        }
+    }
+}

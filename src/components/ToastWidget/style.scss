@@ -1,0 +1,35 @@
+@use "../../assets/styles/index" as *;
+
+.pd_toast_container {
+  .toast_p_box {
+    .exact_toast_p {
+      // word-wrap: break-word;
+      // word-break: break-all;
+    }
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .toast_p_box {
+    .exact_toast_p {
+      // word-wrap: break-word;
+      // word-break: break-all;
+    }
+  }
+  .toast_box {
+    width: 350px;
+    border-radius: 16px;
+    padding: 22px 14px 22px 22px;
+    display: flex;
+    // margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 20px;
+    background-color: #222d37;
+    @include mq(600px) {
+      width: 300px;
+    }
+  }
+  .cancel {
+    width: 35px;
+  }
+}

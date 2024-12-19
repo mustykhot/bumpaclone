@@ -1,0 +1,70 @@
+.pd_pos_select_customer {
+  background-color: var(--white);
+  // padding: 12px 28px;
+  .top_section {
+    padding: 12px 28px;
+  }
+  .checkbox_of_customers {
+    width: 100%;
+  }
+  .top_chips {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 4px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .clock_box {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--grey-04, #d4d7db);
+      p {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        color: var(--grey02);
+      }
+    }
+  }
+  .displayList {
+    &.display_pos_cus_list {
+      padding: 0;
+    }
+
+    .pos_text_name_box {
+      cursor: pointer;
+      width: 100%;
+      display: block;
+      .text_name_box {
+        display: block;
+        width: 100%;
+        .chips {
+          display: block;
+        }
+      }
+    }
+  }
+  .customer_header {
+    border-bottom: 0.5px solid var(--grey04);
+    .pos_pad_icon {
+      background-color: var(--grey00);
+      padding: 16px 12px;
+      border-radius: 8px;
+    }
+    .header {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 28px;
+      color: var(--black02);
+      margin: 1.8rem 0;
+    }
+    .pos_field_box {
+    }
+  }
+}

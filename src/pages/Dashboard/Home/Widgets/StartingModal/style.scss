@@ -1,0 +1,195 @@
+@use "../../../../../assets/styles/index" as *;
+.setup_modal {
+  max-width: 788px;
+  width: 90%;
+  max-height: 90vh;
+  padding: 32px;
+  overflow-y: auto;
+  background-color: var(--white);
+  border-radius: 8px;
+  position: relative;
+  @include webkit;
+  .last_button_container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+    button {
+      background-color: var(--primary);
+    }
+  }
+  .title_section {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--white);
+    padding: 16px 0;
+    margin-bottom: 16px;
+    gap: 8px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      color: var(--black02);
+      margin-bottom: 8px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--grey01);
+    }
+  }
+  .onboard_accordion {
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: none;
+    margin-bottom: 16px !important;
+    border: 2px solid transparent;
+    .MuiAccordionSummary-expandIconWrapper {
+      transform: none !important;
+    }
+    &::before {
+      display: none;
+    }
+    &:hover {
+      border: 2px solid (var(--primary));
+      background-color: var(--pastelGreen);
+    }
+    &.Mui-disabled {
+      background-color: var(--grey07);
+      &:hover {
+        border: 2px solid transparent;
+      }
+    }
+    &.completed {
+      background: #ebf6f0;
+      &:hover {
+        border: 2px solid transparent;
+        background-color: #ebf6f0;
+      }
+    }
+    .chevron {
+      path {
+        stroke: var(--black);
+      }
+    }
+    .completed {
+      background-color: var(--white);
+      color: var(--primary);
+      @include mq(450px) {
+        padding: 6px 8px;
+        min-width: unset;
+      }
+      span {
+        @include mq(450px) {
+          margin: 0;
+        }
+      }
+      .text {
+        @include mq(450px) {
+          display: none;
+        }
+      }
+    }
+    .title_container {
+      display: flex;
+      align-items: flex-start;
+      .icon_box {
+        background: var(--white);
+        border-radius: 8px;
+        padding: 8px;
+        margin-right: 18px;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .text_box {
+        margin-right: 18px;
+        .title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 8px;
+          color: var(--black02);
+          &.text_completed {
+            color: var(--primary);
+          }
+          @include mq(630px) {
+            font-size: 18px;
+          }
+          @include mq(450px) {
+            font-size: 14px;
+          }
+        }
+        .description {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: var(--grey02);
+          @include mq(630px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .button_container {
+      display: flex;
+      margin-left: 58px;
+      flex-wrap: wrap;
+      @include mq(630px) {
+        margin-left: 0;
+      }
+
+      button {
+        height: 44px;
+        font-size: 14px;
+        @include mq(630px) {
+          margin-bottom: 10px;
+          width: 100%;
+        }
+        @include mq(450px) {
+          height: 38px;
+          font-size: 12px;
+        }
+        &.video {
+          margin-left: 8px;
+          background: #eff1f3 !important;
+          color: var(--black02);
+        }
+      }
+    }
+  }
+  .setup_complete {
+    width: 100%;
+    button {
+      width: 100%;
+      &:disabled {
+        background-color: var(--grey04) !important;
+        color: var(--white);
+      }
+    }
+  }
+}
+.onboarding_success_modal {
+  img {
+    margin-top: 60px !important;
+    width: 230px;
+    height: 230px;
+    @include mq(600px) {
+      width: 130px;
+      height: 130px;
+      margin-top: 20px !important;
+    }
+  }
+  .button_container {
+    margin-top: 24px;
+    margin-bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,317 @@
+@use "../../../../assets/styles/index" as *;
+
+.pd_plan_select {
+  width: 590px;
+  margin: 70px auto;
+
+  @include mq(650px) {
+    width: 90%;
+  }
+
+  .plan_section {
+    margin-top: 58px;
+
+    .title_container {
+      margin-bottom: 16px;
+      .title {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 44px;
+        color: var(--black01);
+        margin-bottom: 16px;
+        @include mq(600px) {
+          font-size: 24px;
+        }
+      }
+
+      .title_box {
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        .icon_button_container {
+          border: none;
+          max-width: 40px;
+          margin-right: 14px;
+        }
+        .title {
+          margin-bottom: 0;
+        }
+      }
+
+      .description {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        color: var(--grey01);
+        margin-bottom: 32px;
+        @include mq(600px) {
+          font-size: 14px;
+        }
+
+        &_pick {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      button {
+        border: 1.5px solid var(--primary);
+        height: 32px;
+      }
+    }
+  }
+
+  .feature_modal {
+    @include white_modal_box;
+    .title_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        color: var(--black02);
+      }
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--grey01);
+        margin-top: 8px;
+      }
+    }
+    ul {
+      margin-top: 32px;
+      list-style: disc;
+      padding-left: 20px;
+      li {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--grey01);
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .payment_section {
+    margin-bottom: 24px;
+    .plan_details {
+      .single_detail {
+        padding: 16px 0;
+        border-bottom: 1px solid var(--grey05);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .light {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: var(--grey01);
+        }
+        .bold {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--black02);
+          &.amount {
+            font-size: 20px;
+          }
+        }
+      }
+      .amount_detail {
+        padding: 16px 0;
+        border-bottom: 1px solid var(--grey05);
+        width: 100%;
+
+        .main {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .light {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: var(--grey01);
+        }
+        .bold {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--black02);
+          &.amount {
+            font-size: 20px;
+          }
+        }
+
+        .note {
+          display: flex;
+          background-color: #fff8e7;
+          border-radius: 4px;
+          margin-top: 5px;
+          padding: 8px;
+          span {
+            font-size: 12px;
+            font-weight: 16px;
+            color: black;
+            margin-left: 5px;
+          }
+        }
+      }
+      .form_for_discount {
+        margin: 24px 0;
+        .form-group {
+          padding-right: 0;
+        }
+        button {
+          padding: 16px;
+          border-radius: 0;
+          min-width: 84px;
+          background-color: var(--grey04);
+          height: 100%;
+        }
+        .show_stats {
+          width: 100%;
+          display: flex;
+          gap: 8px;
+          border-radius: 8px;
+          padding: 16px;
+          p {
+            font-size: 14px;
+            font-style: normal;
+            width: calc(100% - 20px);
+            font-weight: 400;
+            line-height: 20px;
+          }
+          &.success {
+            background-color: var(--pastelGreen);
+            p {
+              color: var(--primary);
+            }
+          }
+          &.error {
+            background-color: var(--pastelRed);
+            p {
+              color: var(--error);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .paysatck_flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    img {
+      width: 64px;
+    }
+    p {
+      margin-right: 5px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+
+      color: #979797;
+    }
+  }
+}
+
+.pd_successpayment {
+  width: 100%;
+  height: 100dvh;
+  button {
+    max-width: 450px;
+    width: 80%;
+  }
+}
+
+.growthsuccess {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+  &__text {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--primary);
+    padding: 10px 0;
+  }
+  &__box {
+    border: 1px solid #eff2f6;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px #0000000d;
+    padding: 20px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 698px;
+    @include mq(760px) {
+      width: 90%;
+    }
+    &--title {
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 36px;
+      color: var(--black01);
+    }
+    &--desc {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--grey01);
+    }
+    &--more {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      color: var(--grey01);
+    }
+  }
+  &__benefits {
+    display: flex;
+    padding: 20px;
+    .benefit-icon {
+      width: 32px;
+      height: 32px;
+      margin-bottom: 10px;
+    }
+    &--each {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      &:nth-child(2) {
+        border-left: 1px solid var(--grey04);
+        border-right: 1px solid var(--grey04);
+      }
+      p {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: var(--grey02);
+      }
+    }
+  }
+}

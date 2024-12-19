@@ -1,0 +1,194 @@
+@use "../../../../assets/styles/index" as *;
+.pd_location_details {
+  @include auto_layout;
+  .section {
+    border-radius: 8px;
+    border: 1px solid var(--grey05);
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05),
+      0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  }
+  .about_location_details {
+    width: 100%;
+    .about_location {
+      padding: 16px 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid #eff2f6;
+      .icon_box {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: var(--grey00);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include mq(768px) {
+          width: 50px;
+          height: 50px;
+          svg {
+            width: 20px;
+          }
+        }
+      }
+      .text_box {
+        width: calc(100% - 90px);
+        @include mq(768px) {
+          width: calc(100% - 60px);
+        }
+        .title {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          flex-wrap: wrap;
+          @include mq(768px) {
+            gap: 10px;
+          }
+          h3 {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 28px;
+            color: var(--black02);
+          }
+          p {
+            padding: 2px 8px;
+            background-color: var(--pastelGreen);
+            border-radius: 18px;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px;
+            color: var(--primary);
+          }
+        }
+        .address {
+          margin-top: 8px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          color: var(--grey02);
+        }
+      }
+      @include mq(768px) {
+        padding: 16px;
+      }
+    }
+    .summary_flex_box {
+      display: flex;
+      padding: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      @include mq(768px) {
+        padding: 16px;
+      }
+      .pd_summary_overview_card {
+        min-width: 350px;
+        @include mq(768px) {
+          min-width: 192px;
+        }
+      }
+    }
+  }
+  .location_actions {
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    .pd_single_location {
+      flex: 1;
+      cursor: pointer;
+      min-width: 240px;
+      border-radius: 8px;
+      background-color: var(--black02);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      gap: 19px;
+      justify-content: space-between;
+      .icon_box {
+        width: 54px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 24px;
+        }
+        border-radius: 8px;
+        background-color: var(--white);
+      }
+      .text_side {
+        width: calc(100% - 73px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3px;
+        .count {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 28px;
+          color: var(--white);
+        }
+        .title {
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          color: var(--white);
+        }
+        .arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .activities_section {
+    margin-top: 24px;
+    .title {
+      padding: 10px 24px;
+      border-bottom: 1px solid var(--grey05);
+      p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        color: var(--black02);
+      }
+    }
+    .list_side {
+      max-height: 500px;
+      overflow-y: auto;
+      @include webkit;
+      .single_activity {
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--grey05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .name {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          color: var(--black02);
+        }
+        .date {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          color: var(--black02);
+        }
+      }
+    }
+  }
+}

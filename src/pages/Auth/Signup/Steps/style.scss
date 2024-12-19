@@ -1,0 +1,180 @@
+@use "../../../../assets/styles/index" as *;
+.pd_formsection {
+  margin-bottom: 36px;
+}
+.pd_loginInfo {
+  margin-top: 56px;
+  .form-group-wrapper {
+    .form-group {
+      .react-tel-input {
+        .form-control {
+          width: 90%;
+        }
+      }
+    }
+  }
+  .checkbox_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    > span {
+      padding: 0px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      margin-left: 8px;
+    }
+    a {
+      color: var(--primary);
+    }
+  }
+}
+.pd_confirmEmail {
+  .email_section {
+    span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--primary);
+    }
+    &_box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 96px;
+      border-radius: 16px;
+      background-color: var(--grey00);
+      margin-bottom: 10px;
+      p {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 32px;
+        color: var(--black01);
+        margin-left: 5px;
+      }
+    }
+  }
+}
+.pd_storeInfo {
+  .url_suffix {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    justify-content: center;
+    background-color: var(--grey05);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--black02);
+  }
+  .ask_about_physical_store {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--grey01);
+    }
+    .button_container {
+      display: flex;
+      align-items: center;
+    }
+    button {
+      width: 70px;
+      height: 44px;
+      border-radius: 8px;
+      background-color: var(--grey04);
+      margin-right: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--white);
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include mq(600px) {
+        width: 40px;
+        height: 40px;
+      }
+      &.active {
+        background-color: var(--pastelGreen);
+        color: var(--primary);
+      }
+    }
+  }
+  .display_store_information {
+    .locations {
+      .add_location_container {
+        background: #f9fafb;
+        border-radius: 8px;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        cursor: pointer;
+
+        &.add {
+          .arrow_box {
+            svg {
+              transform: rotate(270deg);
+            }
+          }
+        }
+        .text_box {
+          h3 {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--black02);
+          }
+          p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 2px;
+            color: var(--black02);
+          }
+        }
+        .arrow_box {
+          padding: 4px;
+          width: 32px;
+          height: 32px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+}
+.add_location_divider {
+  margin: 16px 0 !important;
+  cursor: pointer;
+  &::before,
+  &::after {
+    border-top: thin solid var(--primary) !important;
+  }
+  .flex_box {
+    display: flex;
+    align-items: center;
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--primary);
+      margin-left: 10px;
+    }
+  }
+}

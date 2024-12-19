@@ -1,0 +1,30 @@
+@use "../../../../../assets/styles/index" as *;
+.brief_form {
+  padding: 0 32px;
+}
+
+.single_loading_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin-bottom: 40px;
+  border-bottom: 1px solid var(--grey05);
+  padding: 16px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .left_box {
+    width: 50px;
+    height: 70px;
+  }
+  .right_box {
+    width: calc(100% - 70px);
+    .top_right_box {
+      width: 100%;
+    }
+    .bottom_right_box {
+      width: 100%;
+      margin-top: 6px;
+    }
+  }
+}

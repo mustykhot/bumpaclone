@@ -1,0 +1,13 @@
+@use "../../../../assets/styles/index" as *;
+.pd_staff {
+  width: 100%;
+  @include auto-layout;
+  .deactivate {
+    td {
+      opacity: 0.5;
+      &:last-child {
+        opacity: 1;
+      }
+    }
+  }
+}

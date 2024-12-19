@@ -1,0 +1,133 @@
+@use "../../../../assets/styles/index" as *;
+
+.pd_share_invoice_modal {
+  height: 100%;
+  .order_container-ig {
+    padding: 0rem 5rem;
+
+    @include mq(1024px) {
+      padding: 0rem 1rem;
+    }
+
+    .title_section {
+      @include dashboard_title_section;
+    }
+
+    .order_name {
+      h4 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--black02);
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 2px;
+        color: var(--grey01);
+      }
+    }
+
+    .payment_preview_modal {
+      width: 50%;
+      margin: 0rem auto;
+      margin-top: 6rem;
+
+      @include mq(1024px) {
+        width: 80%;
+        margin-top: 3rem;
+      }
+
+      .heading {
+        color: #9ba6b9;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .customer_name {
+        font-weight: 500;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+      }
+
+      .message_area {
+        margin-top: 2rem;
+
+        .mesage_header {
+          font-size: 1.3rem;
+        }
+
+        .message_box {
+          margin-top: 0.5rem;
+          border: 2px solid #c1c9d6;
+          border-radius: 6px;
+          padding: 1.5rem;
+          width: 100%;
+
+          .message_info {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+          }
+
+          .payment_link {
+            background: #eef0f8;
+            border-radius: 6px;
+            margin-top: 1rem;
+            padding: 1.2rem;
+            width: 100%;
+            cursor: pointer;
+            a {
+              color: #9ba6b9;
+              @include mq(1024px) {
+                width: 100%;
+                word-break: break-all;
+              }
+            }
+
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .submit_payment {
+        margin-top: 1rem;
+
+        .button_container {
+          position: fixed;
+          bottom: 3rem;
+          width: 100%;
+
+          button {
+            color: #fff;
+            padding: 1rem;
+            font-size: 7rem;
+            background: #009444;
+            border-radius: 5px;
+            width: calc(100% - 50% - 5rem);
+            @include mq(1024px) {
+              width: calc(100% - 20% - 1rem);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .submit_form_section {
+    @include submit_form_section;
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+
+    .button_container {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,205 @@
+@use "../../../../../assets/styles/index" as *;
+
+.pd_theme_list {
+  &__heading {
+    border: 1px solid #eff2f7;
+    padding: 32px 24px 20px;
+    h3 {
+      color: var(--black01);
+      font-weight: 600;
+      font-size: 1.9rem;
+    }
+
+    p {
+      color: var(--grey01);
+      font-size: 1rem;
+      font-weight: 400;
+      margin-top: 0.4rem;
+    }
+  }
+
+  &__container {
+    @include auto_layout;
+  }
+
+  &__theme {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    @include mq(767px) {
+      grid-template-columns: 1fr;
+    }
+
+    @include mq(1200px) {
+      gap: 0.5rem;
+    }
+  }
+
+  &__itemone {
+    border-radius: 8px;
+    padding-top: 2.5rem;
+    height: fit-content;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
+      0px 0px 10px rgba(0, 0, 0, 0.05);
+
+    &-image {
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    &-footer {
+      background: var(--grey09);
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      height: 5rem;
+      @include mq(1200px) {
+        padding: 1rem 0.5rem;
+        gap: 0.5rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+      }
+
+      div:first-child {
+        color: var(--grey01);
+        display: flex;
+        align-items: center;
+
+        .active-badge {
+          background: var(--pastelYellow);
+          border-radius: 18px;
+          color: var(--pastelYellow02);
+          margin-left: 0.6rem;
+          padding: 0.3rem 0.5rem;
+          font-size: 0.8rem;
+          @include mq(1200px) {
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      div:last-child {
+        margin-left: auto;
+
+        .apply {
+          background: var(--grey00);
+          color: var(--grey01);
+          border-radius: 8px;
+          padding: 0.4rem 1rem;
+          @include mq(1200px) {
+            padding: 0.3rem 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__itemtwo {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
+      0px 0px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    height: fit-content;
+
+    &-image {
+      padding-top: 2.5rem;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    &-footer {
+      background: var(--grey09);
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      height: 5rem;
+      @include mq(1200px) {
+        padding: 1rem 0.5rem;
+        gap: 0.5rem;
+      }
+
+      div:first-child {
+        color: var(--grey01);
+
+        .active-badge {
+          background: var(--pastelYellow);
+          border-radius: 18px;
+          color: var(--pastelYellow02);
+          margin-left: 0.6rem;
+          padding: 0.3rem 0.5rem;
+          font-size: 0.8rem;
+          @include mq(1200px) {
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      div:last-child {
+        margin-left: auto;
+
+        .apply {
+          background: var(--grey00);
+          color: var(--grey01);
+          border-radius: 8px;
+          padding: 0.4rem 1rem;
+          @include mq(1200px) {
+            padding: 0.3rem 1rem;
+          }
+        }
+
+        .customise-theme {
+          background: var(--white);
+          text-decoration: none;
+          border: 1.5px solid var(--primary);
+          color: var(--primary);
+          border-radius: 8px;
+          padding: 0.3rem 1.5rem;
+          @include mq(1200px) {
+            padding: 0.3rem 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-active {
+    background: var(--primary);
+
+    div:first-child {
+      color: var(--white);
+    }
+  }
+  .active {
+    border: 3px solid var(--primary);
+  }
+
+  &__not-customisable {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    @include mq(1200px) {
+      font-size: 0.6rem;
+    }
+  }
+
+  &__info {
+    margin: 7rem 0rem;
+    padding: 2rem 0rem;
+    text-align: center;
+    background: var(--grey09);
+    border-radius: 8px;
+
+    img {
+      margin: 0 auto;
+    }
+
+    p {
+      color: var(--grey03);
+    }
+  }
+}

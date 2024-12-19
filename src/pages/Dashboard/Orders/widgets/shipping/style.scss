@@ -1,0 +1,36 @@
+@use "../../../../../assets/styles/index" as *;
+.displayList {
+  padding: 0 32px;
+  .item {
+    padding: 18px 1px;
+    border-bottom: 1px solid var(--grey05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div {
+      display: flex;
+      align-items: center;
+    }
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: var(--black02);
+    }
+  }
+}
+.brief_form {
+  .visible {
+    display: flex;
+    align-items: center;
+    > span {
+      padding-left: 0;
+    }
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--black02);
+    }
+  }
+}

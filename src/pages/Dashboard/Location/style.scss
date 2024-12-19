@@ -1,0 +1,189 @@
+@use "../../../assets/styles/index" as *;
+.deactivated_chip {
+  padding: 4px 12px;
+  border-radius: 24px;
+  background-color: var(--pastelRed);
+  color: var(--error);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.active_icon {
+  opacity: 1 !important;
+}
+.location_related_product {
+  .right_container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+  }
+  .price_container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    .error_input {
+      font-size: 12px;
+      color: var(--error);
+    }
+    input {
+      width: 75px;
+      height: 50px;
+      outline: none;
+      border-radius: 8px;
+      border: 1.5px solid var(--grey03);
+      background: #fff;
+      padding: 17px 15px;
+    }
+  }
+}
+.pd_location {
+  @include auto_layout;
+  .location_container {
+    .title_section {
+      @include dashboard_title_section;
+      align-items: flex-start !important;
+      margin-bottom: 0;
+
+      @include mq(640px) {
+        margin-bottom: 12px !important;
+      }
+      .top_div {
+        @include mq(640px) {
+          width: 100%;
+        }
+      }
+      .location_count {
+        display: flex;
+        gap: 0.5rem;
+        margin: 2rem 0 1rem 0;
+        align-items: center;
+        @include mq(640px) {
+          display: block;
+        }
+        .first_flex {
+          display: flex;
+          gap: 0.5rem;
+        }
+        span {
+          margin-right: 1rem;
+        }
+        .store_button {
+          padding: 10px 12px;
+          border: 2px solid var(--primary) !important;
+          height: 32px;
+          &.all:hover {
+            border: 0 !important;
+          }
+          &.all {
+            border: 0 !important;
+          }
+          &.fixed-btn {
+            @include mq(640px) {
+              width: 100%;
+              margin-top: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+    .warning {
+      display: flex;
+      padding: 14px 16px;
+      background-color: var(--pastelYellow);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: var(--black02);
+      align-items: center;
+      margin-bottom: 36px;
+      justify-content: space-between;
+      @include mq(640px) {
+        align-items: flex-start;
+      }
+      &.info {
+        background-color: var(--black02);
+        color: var(--white);
+        justify-content: space-between;
+      }
+      .right_flex {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        @include mq(640px) {
+          align-items: flex-start;
+        }
+      }
+      .close-icon {
+        justify-self: flex-end;
+      }
+    }
+    .info_disable {
+      background-color: var(--grey00);
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border-radius: 8px;
+      gap: 8px;
+      width: fit-content;
+      p {
+        color: var(--grey01);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      @include mq(640px) {
+        align-items: flex-start;
+        .icon {
+          width: 40px;
+        }
+      }
+    }
+  }
+  .table_section {
+    .deactivate {
+      td {
+        opacity: 0.4;
+        &:last-child {
+          opacity: 1;
+        }
+      }
+    }
+    .my-table {
+      overflow-x: unset !important;
+      tbody {
+        td {
+          padding: 20px 10px;
+        }
+      }
+      .MuiTableRow-head {
+        th {
+          padding: 20px 10px;
+        }
+      }
+    }
+  }
+}
+
+.question_for_move {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--black02);
+  margin-bottom: 16px;
+}
+
+.select_inventory_modal {
+  .show_selected {
+    button {
+      width: 100%;
+      margin: 24px 0;
+    }
+  }
+}

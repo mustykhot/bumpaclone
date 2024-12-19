@@ -1,0 +1,56 @@
+@use "../../../../../../assets/styles/index" as *;
+
+.setup-modal {
+  background-color: var(--white);
+  padding: 1rem 1rem 4rem 1rem;
+  max-width: 520px;
+  width: 90%;
+
+  border: 1px solid var(--grey05);
+  border-radius: 12px;
+
+  &__content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  &__close {
+    svg {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+
+  &__title-icon {
+    svg {
+      margin: 0 auto;
+    }
+  }
+
+  &__title-section {
+    h3 {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  }
+
+  &__body-section {
+    margin-top: 1rem;
+
+    p {
+      color: var(--grey01);
+    }
+
+    button {
+      margin-top: 2rem;
+      width: 100%;
+      font-weight: 400;
+    }
+  }
+}

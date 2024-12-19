@@ -1,0 +1,15 @@
+@use "../../../../../assets/styles/index" as *;
+.pd_campaign_analytics {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  .pd_line_chart_card {
+    width: 49% !important;
+    flex-grow: 1;
+    @include mq(1200px) {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+}

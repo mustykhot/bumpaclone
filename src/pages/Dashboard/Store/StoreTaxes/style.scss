@@ -1,0 +1,7 @@
+@use "../../../../assets/styles/index" as *;
+.pd_taxes {
+  @include auto-layout;
+  @include mq(677px) {
+    margin-top: 1rem;
+  }
+}

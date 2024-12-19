@@ -1,0 +1,50 @@
+@use "../../../../../assets/styles/index" as *;
+
+.pd_sales {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  justify-content: space-between;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    .pd_line_chart_card {
+      width: 49% !important;
+      flex-grow: 1;
+      .donut_section {
+        margin: 30px 0 30px;
+        .cover_donut_with_label {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          width: 100%;
+          justify-content: center;
+          .label_side {
+            .single_label {
+              display: flex;
+              align-items: center;
+              margin-bottom: 6px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              .color {
+                width: 11px;
+                height: 11px;
+                border-radius: 2.75px;
+              }
+              .text {
+                color: var(--grey02);
+                margin-left: 6px;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

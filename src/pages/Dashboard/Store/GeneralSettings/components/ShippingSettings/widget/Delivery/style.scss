@@ -1,0 +1,132 @@
+@use "../../../../../../../../assets/styles/index" as *;
+.pd_delivery_settings {
+  .process-days {
+    padding-right: 0 !important;
+  }
+  .days_btn {
+    height: 100% !important;
+    padding: 20px;
+    background-color: var(--grey00) !important;
+    border-radius: 0 !important;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .check_box {
+    display: flex;
+    margin-top: 4px;
+    align-items: center;
+
+    span {
+      padding: 0;
+    }
+
+    p {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      color: var(--black02);
+    }
+    &.margin {
+      margin: 16px 0;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  .accordion {
+    @include resetAccordion;
+  }
+  .set_time_section {
+    margin-top: 10px;
+
+    .single_time_row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .day {
+        padding: 4px 12px 4px 0;
+        flex-shrink: 0;
+        min-width: 90px;
+        p {
+          text-transform: capitalize;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 14px;
+          color: var(--black02);
+        }
+      }
+      .time_section {
+        border-left: 1px solid var(--grey04);
+        padding-left: 16px;
+        .time_flex {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 8px;
+          .single_time {
+            .input_time {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              .chevron {
+                width: 18px;
+                height: 18px;
+              }
+              button {
+                padding: 0;
+              }
+              input {
+                border-radius: 4px;
+                padding: 4px 8px;
+                border: 1px solid var(--grey03);
+                height: 40px;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px;
+                outline: none;
+                color: var(--black02);
+                cursor: pointer;
+                width: 120px;
+                @include mq(600px) {
+                  font-size: 16px;
+                  max-width: 120px;
+                }
+              }
+            }
+            .display_time {
+              border-radius: 4px;
+              border: 1px solid var(--grey03);
+              padding: 4px 8px;
+              display: flex;
+              align-items: center;
+              background: var(--grey05);
+              height: 40px;
+              gap: 10px;
+              width: 120px;
+              svg {
+                width: 12px;
+                height: 12px;
+              }
+              button {
+                padding: 0;
+              }
+              p {
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 14px;
+                color: var(--grey01);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

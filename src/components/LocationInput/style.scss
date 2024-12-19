@@ -1,0 +1,33 @@
+@use "../../assets/styles/index" as *;
+
+.pd_location_input {
+  width: 100%;
+  position: relative;
+  .show_search_result {
+    width: 100%;
+    position: absolute;
+    z-index: 25;
+    top: 100px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    .single_search {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+      padding: 10px 0;
+      p {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        color: var(--black01);
+      }
+      svg {
+        flex-shrink: 0;
+      }
+    }
+  }
+}

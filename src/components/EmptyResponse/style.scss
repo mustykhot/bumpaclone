@@ -1,0 +1,52 @@
+@use "../../assets/styles/index" as *;
+.empty-response-pg {
+  text-align: center;
+  margin-top: 30px;
+  @apply flex items-center justify-center flex-col;
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+  img {
+    max-width: 196px;
+    max-height: 166px;
+    width: 64px;
+    height: 64px;
+  }
+  p.message_text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 20px 0 12px;
+    color: var(--black02);
+    @include mq(600px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  p.extra_text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 32px;
+    color: var(--grey01);
+    @include mq(600px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .empty_btn_box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    button,
+    a {
+      height: 44px;
+      padding: 12px 28px;
+      @include mq(500px) {
+        width: 100%;
+      }
+    }
+  }
+}

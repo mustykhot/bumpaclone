@@ -1,0 +1,35 @@
+@use "../../../../../../assets/styles/index" as *;
+
+.store-front {
+  padding: 2rem 12rem;
+  margin-bottom: 1rem;
+  @include mq(1200px) {
+    padding: 2rem 1rem;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    a {
+      background: var(--grey00);
+      border-radius: 8px;
+      padding: 0.9rem;
+      cursor: pointer;
+    }
+
+    h3 {
+      color: var(--black01);
+      font-weight: 600;
+      font-size: 1.9rem;
+      @include mq(767px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__store-view {
+    margin-top: 3rem;
+  }
+}

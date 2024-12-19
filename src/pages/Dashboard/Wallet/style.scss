@@ -1,0 +1,275 @@
+@use "../../../assets/styles/index" as *;
+
+.pd_wallet {
+    @include auto_layout;
+
+    .wallet-settings {
+        background: #EFF1F3;
+        color: #222D37;
+        padding: 1rem 2rem;
+
+        p {
+            font-weight: 500;
+        }
+    }
+
+    .wallet-settings-list {
+        button {
+            justify-content: left !important;
+            font-weight: 400 !important;
+        }
+    }
+
+    .wallet-top {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        gap: 2rem;
+
+        @include mq(767px) {
+            grid-template-columns: 1fr;
+        }
+
+        .wallet-currency-select {
+            border-radius: 8px;
+            background: #FFF;
+            color: #222D37;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05), 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .wallet-balance {
+            border-radius: 8px;
+            background: #EEF6F2;
+            padding: 1.5rem;
+
+
+            .withdrawal-button {
+                border-radius: 8px;
+                background-color: #fff;
+                color: #222D37;
+
+                &:hover {
+                    background-color: #009444;
+                    color: #fff;
+
+                    svg {
+                        path {
+                            stroke: #fff;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .wallet-bank {
+            border-radius: 8px;
+            border: 1px solid #EFF2F6;
+            background: #FFF;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05), 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .wallet-bottom {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        gap: 2rem;
+
+        @include mq(767px) {
+            grid-template-columns: 1fr;
+        }
+
+        .chart_section {
+            @include dashboard_card;
+            // height: max-content;
+            width: 100%;
+
+            .transaction_summary {
+                display: flex;
+                align-items: center;
+
+                @include mq(600px) {
+                    flex-direction: column;
+                    align-items: unset;
+                    padding: 0 10px;
+                }
+
+                .detail {
+                    border-top: unset;
+
+                    @include mq(600px) {
+                        margin-bottom: 10px;
+                        padding: 0 !important;
+                        border: unset !important;
+                    }
+
+                    &:first-child {
+                        padding: 0;
+                        padding-right: 24px;
+                    }
+
+                    &:last-child {
+                        padding: 0;
+                        padding-left: 24px;
+                    }
+
+                    &.border-right {
+                        border-right: 1px solid #d4d7db;
+                    }
+
+                    &.border {
+                        border-left: 1px solid #d4d7db;
+                        border-right: 1px solid #d4d7db;
+                        padding: 0 24px;
+                        border-bottom: unset;
+                    }
+
+                    .title {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 22px;
+                        color: var(--grey01);
+                    }
+
+                    .amount {
+                        font-weight: 600;
+                        font-size: 24px;
+                        line-height: 29px;
+                        color: var(--black02);
+
+                        &.primary {
+                            color: var(--primary);
+                        }
+                    }
+                }
+            }
+
+            .chart_container {
+                margin-top: 30px;
+                position: relative;
+                width: 100%;
+                overflow-y: auto;
+                padding: 0 10px;
+                @include webkit;
+                @include apexchart_styles;
+
+                .chart_sekeleton_container {
+                    width: 100%;
+                  }
+
+                .empty_chart_modal {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 20;
+                    .empty_chart_box {
+                      border-radius: 16px;
+                      background-color: var(--white);
+                      padding: 24px 20px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      flex-direction: column;
+                      width: 300px;
+                      box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.14);
+                      h4 {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-bottom: 10px;
+                        color: #5c636d;
+                      }
+                      p {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        text-align: center;
+                        color: #5c636d;
+                        margin-bottom: 10px;
+                      }
+                      button {
+                        height: 32px;
+                      }
+                    }
+                  }
+            }
+        }
+    }
+
+    .wallet-transaction {
+        border-radius: 8px;
+        border: 1px solid #EFF2F6;
+        background: #FFF;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05), 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .wallet-payment-receipt {
+        border-radius: 8px;
+        border: 1px solid #EFF2F6;
+        background: #FFF;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05), 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .filter_container {
+        .drop-down-date-picker {
+            .drop_btn {
+                height: 32px;
+                border: none;
+                display: inline-flex;
+                gap: 1.5rem;
+                color: var(--grey01);
+                background: var(--grey05);
+                font-weight: 400;
+            }
+        }
+    }
+
+    .all-filter {
+        height: 32px;
+        color: var(--grey01);
+        background: var(--grey05);
+        font-weight: 400;
+        width: 32px !important;
+        font-size: 14px;
+
+        @include mq(600px) {
+            width: 5rem;
+        }
+    }
+
+    .my-select {
+        height: 32px;
+        border: none !important;
+        display: inline-flex;
+        outline: none !important;
+        gap: 1.5rem;
+        border-radius: 8px !important;
+        color: var(--grey01) !important;
+        background: var(--grey05) !important;
+        font-weight: 400;
+        width: 7rem;
+        font-size: 14px;
+
+        @include mq(600px) {
+            width: 5rem;
+        }
+    }
+
+    .active-class{
+        background-color: #848D99 !important;
+        color: #FFF;
+
+        svg{
+            stroke: #fff;
+            fill: #FFF;
+        }
+    }
+
+
+}

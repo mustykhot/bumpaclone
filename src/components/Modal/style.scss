@@ -1,0 +1,192 @@
+@use "../../assets/styles/index" as *;
+.modal-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(9, 9, 23, 0.319);
+  z-index: 1000;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.confirm_payment_and_match {
+    z-index: 3000;
+  }
+  &.increaseZ {
+    z-index: 2000;
+  }
+  &.white_bg {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  &.white_background {
+    background: var(--white);
+  }
+  .modal-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  // .modal-content {
+  //   position: relative;
+  //   display: flex;
+  //   background-color: #fff;
+  //   border: 1px solid #a7cfff;
+  //   border-radius: 20px;
+  //   flex-direction: column;
+  //   width: 95vw;
+  //   @apply md:py-5 py-5;
+  //   margin: auto;
+  //   max-height: 90vh;
+  //   overflow-y: auto;
+
+  //   .btn-wrap {
+  //     display: flex;
+  //     justify-content: flex-end;
+  //     button {
+  //       min-width: 118px;
+  //     }
+  //   }
+  // }
+  .msg-modal {
+    max-width: 524px;
+    max-height: 340px;
+    height: 90dvh;
+    width: 90%;
+    border-radius: 12px;
+    border: 1px solid var(--grey05);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    padding: 32px;
+    @include mq(600px) {
+      max-height: 350px;
+    }
+    &.remove_height {
+      max-height: 484px !important;
+
+      justify-content: center !important;
+      .my-auto {
+        margin: unset !important;
+      }
+    }
+
+    .icon-wrap {
+      width: 88px;
+      height: 88px;
+      border-radius: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 22px;
+      background-color: var(--grey00);
+      &.remove_icon_bg {
+        width: unset !important;
+        height: unset !important;
+        background-color: unset;
+      }
+      @include mq(600px) {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+      }
+      svg {
+        width: 46px;
+        height: 46px;
+        @include mq(600px) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    text-align: center;
+    .title {
+      font-size: 27px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 36px;
+      color: var(--black02);
+      margin-bottom: 16px;
+      @include mq(600px) {
+        font-size: 20px;
+      }
+    }
+    &.increase_height {
+      max-height: 450px !important;
+      justify-content: center !important;
+
+      .my-auto {
+        margin: unset !important;
+      }
+    }
+    .description {
+      color: var(--black02);
+      margin-bottom: 40px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      @include mq(600px) {
+        font-size: 14px;
+      }
+    }
+    .btn_flex {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+      button {
+        width: 184px;
+        height: 44px;
+        font-weight: 500;
+        font-size: 14px;
+        @include mq(600px) {
+          width: 100%;
+        }
+        &.primary_btn {
+          background-color: var(--primary) !important;
+          color: var(--white) !important;
+        }
+        &.error {
+          background-color: var(--error);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.modal_title_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 26px;
+  h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--black02);
+    @include mq(600px) {
+      font-size: 14px;
+    }
+  }
+  p {
+    font-size: 14px;
+    color: var(--grey01);
+    line-height: 18px;
+    margin-top: 4px;
+    @include mq(600px) {
+      font-size: 12px;
+    }
+  }
+}

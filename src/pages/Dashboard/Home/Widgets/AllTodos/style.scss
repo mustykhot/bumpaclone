@@ -1,0 +1,103 @@
+@use "../../../../../assets/styles/index" as *;
+
+.pd_view_todos {
+  position: relative;
+
+  .not_header {
+    display: flex;
+    // background: lime;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .title {
+      display: flex;
+      align-items: flex-end;
+    }
+    .header {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 32px;
+      margin-right: 10px;
+      @include mq(780px) {
+        font-size: 20px;
+      }
+    }
+    .not_number {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      background-color: var(--grey05);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      // padding: 10px;
+      text-align: center;
+      padding-top: 3px;
+      color: var(--grey01);
+      @include mq(780px) {
+        font-size: 14px;
+      }
+    }
+    .read_nots {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--primary);
+      align-items: flex-end;
+      cursor: pointer;
+      @include mq(780px) {
+        font-size: 12px;
+      }
+    }
+  }
+  .all_todos_list {
+    margin-top: 22px;
+    padding: 0 32px;
+    .todo_item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--grey05);
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      cursor: pointer;
+      align-items: center;
+      gap: 4px;
+
+      .text_section {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        .icon_box {
+          flex-shrink: 0;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--pastelYellow);
+          border-radius: 8px;
+          svg {
+            path {
+              stroke: var(--yellow);
+            }
+          }
+          &.products {
+            background-color: var(--pastelRed);
+            svg {
+              path {
+                stroke: var(--error);
+              }
+            }
+          }
+          &.orders {
+            background-color: var(--pastelGreen);
+            svg {
+              path {
+                stroke: var(--primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

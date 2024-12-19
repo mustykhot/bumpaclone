@@ -1,0 +1,100 @@
+@use "../../../../../assets/styles/index" as *;
+.pd_product_analytics {
+  .empty_record {
+    border-top: 1px solid var(--grey04);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 10px;
+    text-align: center;
+    color: var(--grey01);
+  }
+  .left_section {
+    .top_selling {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      .top_selling_product {
+        @include dashboard_card;
+        padding: 24px;
+        min-width: 360px;
+        height: max-content;
+        width: 48%;
+
+        @include mq(1200px) {
+          width: 100%;
+          min-width: unset;
+        }
+
+        h3 {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          color: var(--grey03);
+          margin-bottom: 20px;
+        }
+        .top_product {
+          cursor: pointer;
+          @include top_selling_product;
+        }
+        .top_collection {
+          cursor: pointer;
+          @include top_collection;
+        }
+      }
+    }
+  }
+  .right_section {
+    .product_summary_container {
+      @include dashboard_card;
+      padding: 24px;
+      .title_box {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          font-weight: 500;
+          font-size: 14.678px;
+          line-height: 22px;
+          color: var(--grey01);
+        }
+      }
+      .summary_flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 64px;
+        .pd_single_business_info {
+          width: 48%;
+        }
+      }
+    }
+    .top_selling_product {
+      @include dashboard_card;
+      margin-top: 24px;
+      padding: 24px;
+      min-width: 360px;
+      height: max-content;
+      width: 100%;
+
+      h3 {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--grey03);
+        margin-bottom: 20px;
+      }
+      .top_product {
+        cursor: pointer;
+        @include top_selling_product;
+      }
+      .top_collection {
+        cursor: pointer;
+        @include top_collection;
+      }
+    }
+  }
+}

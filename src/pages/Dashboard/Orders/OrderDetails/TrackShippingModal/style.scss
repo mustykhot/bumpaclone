@@ -1,0 +1,77 @@
+@use "../../../../../assets/styles/index" as *;
+.track-shipping-modal {
+  @include webkit;
+  overflow-y: auto;
+  border-radius: 8 !important;
+  // height: 90vh !important;
+  // max-height: 600px !important;
+  height: max-content !important;
+  max-height: 90vh !important;
+  display: unset !important;
+  text-align: unset !important;
+
+  .top_side {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+    .title-container {
+      h3 {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+        color: var(--grey01);
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .middle_side {
+    .partner-and-date {
+      padding-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 4px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #d4d7db;
+    }
+    .tracker {
+      margin: 20px 0;
+    }
+    .partner,
+    .date {
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        color: #5c636d;
+      }
+      p.date-text {
+        font-size: 14px;
+        color: #5c636d;
+      }
+      img {
+        max-width: 120px;
+        object-fit: contain;
+      }
+    }
+    .select-location-container {
+      margin: 20px 0;
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        color: #5c636d;
+      }
+    }
+  }
+  .bottom_side {
+    width: 100%;
+    button {
+      margin-bottom: 0;
+      width: 100%;
+    }
+  }
+}

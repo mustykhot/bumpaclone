@@ -1,0 +1,403 @@
+@use "../../../assets/styles/index" as *;
+
+.pd_transaction_details_modal {
+  padding: 0 32px;
+
+  .flex_details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--grey05);
+
+    .light {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--grey01);
+    }
+
+    .bold {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      color: var(--black02);
+    }
+  }
+
+  button {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.pd_transactions {
+  &.transaction_section {
+    width: 100%;
+    @include auto_layout;
+  }
+
+  .verify_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    gap: 10px;
+    background-color: var(--pastelYellow);
+    .left_box {
+      display: flex;
+      &--text {
+        margin-left: 10px;
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--black02);
+      }
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--black02);
+      }
+    }
+    button {
+      min-width: 137px;
+      @include mq(570px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .verification_complete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: var(--pastelGreen);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    .text_side {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      p {
+        color: var(--black02);
+        font-size: 14px;
+        line-height: 20px;
+        word-wrap: break-word;
+      }
+    }
+    .button_side {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  .filter_container {
+    .drop-down-date-picker {
+      .drop_btn {
+        height: 32px;
+        border: none;
+        color: var(--grey01);
+        background: var(--grey05);
+        font-weight: 400;
+      }
+    }
+  }
+
+  .transaction_details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+
+    @include mq(1300px) {
+      flex-direction: column;
+    }
+
+    .left_section {
+      width: 65%;
+
+      &.full-left {
+        width: 100%;
+      }
+
+      @include mq(1300px) {
+        width: 100%;
+      }
+
+      .chart_section {
+        @include dashboard_card;
+        padding: 24px 0;
+        height: max-content;
+        width: 100%;
+
+        .transaction_summary {
+          display: flex;
+          align-items: center;
+          padding: 24px;
+
+          @include mq(600px) {
+            flex-direction: column;
+            align-items: unset;
+            padding: 0 10px;
+          }
+
+          .detail {
+            border-top: unset;
+
+            @include mq(600px) {
+              margin-bottom: 10px;
+              padding: 0 !important;
+              border: unset !important;
+            }
+
+            &:first-child {
+              padding: 0;
+              padding-right: 24px;
+            }
+
+            &:last-child {
+              padding: 0;
+              padding-left: 24px;
+            }
+
+            &.border-right {
+              border-right: 1px solid #d4d7db;
+            }
+
+            &.border {
+              border-left: 1px solid #d4d7db;
+              border-right: 1px solid #d4d7db;
+              padding: 0 24px;
+              border-bottom: unset;
+            }
+
+            .title {
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 22px;
+              color: var(--grey01);
+            }
+
+            .amount {
+              font-weight: 600;
+              font-size: 24px;
+              line-height: 29px;
+              color: var(--black02);
+
+              &.primary {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+
+        .business_info_section {
+          display: flex;
+          justify-content: space-between;
+          padding: 24px 24px 0px;
+          border-top: 1px solid var(--grey05);
+
+          .business_info_container {
+            @include business_info_container;
+          }
+
+          @include mq(600px) {
+            padding: 10px 10px 0;
+            margin-top: 20px;
+            border-top: unset;
+          }
+        }
+
+        .chart_container {
+          margin-top: 30px;
+          width: 100%;
+          overflow-y: auto;
+          padding: 0 10px;
+          @include webkit;
+          @include apexchart_styles;
+        }
+      }
+    }
+
+    .right_section {
+      width: 33%;
+
+      @include mq(1300px) {
+        width: 100%;
+      }
+
+      .pd_line_chart_card {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .settlement_info {
+    display: flex;
+    margin-top: 10px;
+
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      color: #5c636d;
+      margin-left: 4px;
+    }
+  }
+
+  .summary_section {
+    @include summary_section;
+
+    .pd_summary_overview_card {
+      width: unset;
+    }
+
+    .restricted {
+      display: flex;
+      align-items: flex-end;
+      p {
+        color: var(--error);
+        margin-right: 7px;
+      }
+      button {
+        padding: 0;
+      }
+    }
+  }
+
+  .title_section {
+    display: flex;
+    justify-content: space-between;
+    @include mq(600px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .kyc_section {
+    .account_level {
+      display: flex;
+      margin-bottom: 24px;
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: var(--black02);
+        margin-right: 8px;
+      }
+    }
+    .limit {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: var(--black02);
+        margin-right: 8px;
+        margin-bottom: 12px;
+        span {
+          font-weight: 500;
+        }
+      }
+      button {
+        border: 1.5px solid var(--primary);
+        height: 36px;
+      }
+    }
+    @include mq(600px) {
+      display: flex;
+      justify-content: space-between;
+      .account_level {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .canceled_subscription_state {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    .text_side {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      p {
+        font-size: 14px;
+        color: var(--black02);
+        width: calc(100% - 34px);
+        line-height: 20px;
+        word-wrap: break-word;
+      }
+    }
+    .button_side {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    &.downtime {
+      background-color: var(--pastelYellow);
+      border: 1px solid var(--pastelYellow02);
+    }
+    &.restored {
+      background: none;
+      border: 1px solid var(--grey04);
+    }
+  }
+}
+
+.pd_transaction_history_modal {
+  width: 80%;
+  margin: auto;
+
+  @include mq(600px) {
+    width: 90%;
+  }
+
+  .summary_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 24px 0 22px;
+  }
+
+  .table_container {
+    width: 100%;
+
+    .display_order {
+      .title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--black02);
+      }
+
+      .description {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--grey01);
+      }
+    }
+  }
+}

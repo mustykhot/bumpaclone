@@ -1,0 +1,60 @@
+@use "../../../../assets/styles/index" as *;
+
+.pd_add_new_customer {
+  width: 100%;
+  height: 100%;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .error-bg-new {
+      border-color: red !important;
+    }
+    .form_section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      @include auto_layout;
+      .left_section {
+        width: 100%;
+        max-width: 772px;
+
+        .details_box {
+          border: 1px solid var(--grey04);
+          border-radius: 8px;
+          width: 100%;
+          overflow: hidden;
+          .accordion {
+            margin-bottom: 8px;
+            box-shadow: none;
+          }
+          .accordion_summary {
+            @include accordion_summary;
+          }
+          .billing_address {
+            margin: 16px 0;
+            .add_label {
+              @include label_styles;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+            }
+            .check_box {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              margin-bottom: 14px;
+              > span {
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .submit_form_section {
+      @include submit_form_section;
+    }
+  }
+}

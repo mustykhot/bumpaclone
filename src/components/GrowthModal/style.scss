@@ -1,0 +1,166 @@
+@use "../../assets/styles/index" as *;
+.growth_modal_pop {
+  width: 90%;
+  max-width: 660px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 32px;
+  border-radius: 8px;
+  max-height: 80vh;
+  @include webkit;
+  background: linear-gradient(180deg, #025327 0%, #04b254 100%);
+  overflow: auto;
+  .modal_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    @include mq(768px) {
+      align-items: flex-end;
+    }
+    .icon_button_container {
+      background: rgba(13, 24, 33, 0.3) !important;
+    }
+  }
+  .upgrade_box {
+    width: 100%;
+    p.upgrade_text {
+      color: #ffffff;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+      @include mq(768px) {
+        font-size: 20px;
+      }
+    }
+    p.upgrade_explain {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25.6px;
+      color: #ffffff;
+      margin-top: 6px;
+      @include mq(768px) {
+        font-size: 14px;
+      }
+    }
+    .white_growth_box {
+      margin-top: 24px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      .bumpa_grwoth {
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        color: #000000;
+        @include mq(768px) {
+          font-size: 20px;
+        }
+      }
+      .large {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25.6px;
+        color: #7b7b7b;
+        width: 95%;
+        margin-top: 6px;
+        @include mq(768px) {
+          font-size: 14px;
+        }
+      }
+      .price_box {
+        margin-top: 8px;
+        p {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22.4px;
+          @include mq(768px) {
+            font-size: 12px;
+          }
+        }
+        h4 {
+          font-size: 42px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 44px;
+          color: #009444;
+          @include mq(768px) {
+            font-size: 30px;
+          }
+        }
+        span{
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px;
+          color: var(--grey01);
+        }
+        .billed {
+          padding: 4px 8px;
+          border-radius: 24px;
+          background: #f2f2f2;
+          width: max-content;
+          margin-top: 8px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22.4px;
+          color: #7b7b7b;
+          @include mq(768px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .benefits {
+      margin-top: 16px;
+      .plan_benefit {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+      .list_plan_benefits {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8px;
+        align-items: center;
+        .single_plan_benefit {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          color: #ffffff;
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+    .subscribe_btn {
+      margin-top: 24px;
+      width: 100%;
+      border-radius: 8px;
+      background: #ffffff;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      color: #009444;
+    }
+  }
+}

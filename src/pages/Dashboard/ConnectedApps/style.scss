@@ -1,0 +1,264 @@
+@use "../../../assets/styles/index" as *;
+
+.pd_connected_apps {
+  .warning-info {
+    display: flex;
+    padding: 14px 16px;
+    gap: 10px;
+    background-color: var(--pastelYellow);
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 36px;
+    justify-content: space-between;
+    @include mq(768px) {
+      display: block;
+      .info_icon {
+        display: none;
+      }
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      color: var(--black02);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 16px;
+      @include mq(768px) {
+        margin-top: 1rem;
+      }
+    }
+  }
+  @include auto_layout;
+  height: max-content;
+  .page_title_box {
+    margin-bottom: 18px;
+    h3 {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 32px;
+      color: var(--black01);
+      margin-bottom: 12px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--grey01);
+    }
+  }
+  .tab_container {
+    width: 100%;
+    margin-bottom: 24px;
+    @include tab_button;
+  }
+  .connected_app_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .general_conneccted_app_container {
+    border: 1px solid var(--grey05);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25),
+      0px 0px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    background-color: var(--white);
+    min-width: 346px;
+    width: 32%;
+    padding: 26px 20px 20px;
+    &.not_active {
+      background-color: var(--pastelYellow);
+    }
+    display: flex;
+    flex-direction: column;
+    &:hover {
+      box-shadow: 0px 0px 23px 0px rgba(0, 0, 0, 0.2),
+        0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+    }
+    @include mq(800px) {
+      width: 100%;
+    }
+    &.meta {
+      .app_image {
+        width: 36px;
+      }
+      &.connected {
+        width: 100%;
+        .meta_flex {
+          gap: 16px;
+          display: flex;
+          @include mq(650px) {
+            flex-direction: column;
+          }
+          .left {
+            width: 346px;
+
+            @include mq(650px) {
+              width: 100%;
+            }
+          }
+          .right {
+            width: calc(100% - 346px);
+            border-left: 1px solid var(--grey04);
+            padding: 10px 10px 10px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            row-gap: 20px;
+            @include mq(650px) {
+              width: 100%;
+              padding-left: 0;
+              margin-top: 30px;
+              border-left: none;
+            }
+            @include mq(450px) {
+              row-gap: 30px;
+            }
+
+            .pd_single_meta {
+              .top {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                img {
+                  width: 20px;
+                }
+                h4 {
+                  font-weight: 500;
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: var(--black02);
+                }
+              }
+              p {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                margin-top: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.google {
+      .app_image {
+        width: 36px;
+      }
+    }
+    &.paystack {
+      // cursor: pointer;
+      .charge_container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        > span {
+          padding: 0;
+        }
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+        p {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          color: var(--grey01);
+        }
+      }
+      .app_image {
+        width: 24px;
+      }
+      display: flex;
+      flex-direction: column;
+      .connect_button {
+        width: auto !important;
+        margin-top: auto;
+        align-self: flex-start;
+      }
+    }
+    &.bank {
+      .app_image {
+        width: 36px;
+      }
+    }
+    .title_flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .title_container {
+        display: flex;
+        align-items: center;
+        h4 {
+          margin-left: 8px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 28px;
+          color: var(--black02);
+        }
+      }
+      .connected_box {
+        display: flex;
+        align-items: center;
+        padding: 6px 8px;
+        border-radius: 46px;
+        background-color: var(--pastelGreen);
+        p {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          color: var(--primary);
+          margin-left: 4px;
+        }
+      }
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .description {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--grey02);
+      width: 90%;
+      margin: 18px 0px 22px;
+      height: 50px;
+      &.meta_p {
+        height: auto;
+      }
+    }
+    .warning {
+      font-size: 14px;
+      color: var(--grey01);
+      height: auto;
+      margin-bottom: 1rem;
+      line-height: 20px;
+    }
+
+    .connect_button {
+      border: 2px solid #5c636d;
+      padding: 8px 6px;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 6px 8px;
+      color: var(--grey01);
+      height: 32px;
+      width: fit-content;
+      &.connected {
+        color: var(--error);
+        border: 2px solid var(--error);
+      }
+    }
+  }
+}

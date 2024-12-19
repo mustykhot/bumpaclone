@@ -1,0 +1,144 @@
+@use "../../../../assets/styles/index" as *;
+
+.get_terminal_modal {
+  @include white_modal_box;
+  max-width: 659px;
+  border-radius: 20px;
+  @include mq(600px) {
+    padding: 20px;
+  }
+  .back_section {
+    width: 100%;
+    margin-bottom: 20px;
+    .back_btn_wrap {
+      background-color: var(--grey00);
+      border-radius: 8px;
+      padding: 15px;
+    }
+  }
+  .cancel_section {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .main {
+    padding: 30px 28px;
+    &.two {
+      padding-bottom: 20px;
+    }
+    &.three {
+      .form-group-wrapper {
+        .form-group {
+          z-index: auto !important;
+          .react-tel-input {
+            .form-control {
+              width: 90%;
+            }
+          }
+          button {
+            min-width: auto;
+            padding: 4px;
+            &:hover,
+            :active {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+    &--header {
+      &.three {
+        margin-bottom: 40px;
+      }
+      h2 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 32px;
+        color: var(--black02);
+        margin-bottom: 8px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--grey01);
+      }
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--primary);
+        font-style: italic;
+      }
+    }
+    &--info {
+      margin: 40px 0;
+      padding: 36px 24px;
+      background-color: var(--grey00);
+      border-radius: 16px;
+      &__each {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: var(--grey01);
+        }
+        span {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--black02);
+        }
+      }
+    }
+    &--form {
+      margin-top: 24px;
+      .MuiAutocomplete-endAdornment {
+        top: calc(50% - 10px);
+      }
+    }
+    &--whatsapp {
+      &_visible {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      &_input {
+        flex-grow: 1;
+      }
+      &_button {
+        display: flex;
+        justify-content: center;
+        button {
+          &:hover,
+          :active {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    @include mq(600px) {
+      padding: 10px;
+    }
+  }
+  .button_container {
+    width: 100%;
+    margin: 30px 0;
+    &.two {
+      margin-bottom: 0;
+    }
+    button {
+      width: 100%;
+      &.continue {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

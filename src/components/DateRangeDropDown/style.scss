@@ -1,0 +1,121 @@
+@use "../../assets/styles/index" as *;
+.drop-down-date-picker {
+  position: relative;
+  height: max-content;
+  .date_range_cover {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include mq(1000px) {
+      flex-direction: column-reverse;
+    }
+    .quick_range {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      border-right: 1px solid var(--grey05);
+      @include mq(1000px) {
+        border-top: 1px solid var(--grey05);
+        width: 100%;
+        border-right: none;
+      }
+      button {
+        display: flex;
+        justify-content: flex-start;
+        color: var(--black02);
+        border-bottom: 1px solid var(--grey05);
+        border-radius: 0;
+        font-weight: 400;
+        padding: 8px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .DateRangePicker_CalendarSelection {
+    background-color: var(--primary);
+  }
+  .rdrDayToday .rdrDayNumber span {
+    &::after {
+      background: var(--primary) !important;
+    }
+  }
+  .drop_down_cover {
+    width: fit-content;
+    position: absolute;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 18px 12px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    background-color: white;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    width: max-content;
+    z-index: 10000;
+    top: 120%;
+    &.from_top {
+      transform-origin: bottom left;
+      bottom: 120%;
+    }
+
+    &.show-drop-down {
+      transform: scale(1);
+    }
+    &.from_right {
+      left: unset;
+      right: 0%;
+      transform-origin: top right;
+    }
+    &.from_left {
+      transform-origin: top left;
+    }
+    @include mq(768px) {
+      padding: 20px 0;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      overflow-y: auto;
+      top: 0;
+      left: 0;
+      background: rgba(9, 9, 23, 0.319);
+      display: flex;
+      align-items: center;
+
+      transform-origin: unset !important;
+      @include webkit;
+    }
+  }
+  .drop-down-content {
+    background-color: var(--white);
+    .button_flex_box {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      width: 100%;
+      justify-content: flex-end;
+      gap: 8px;
+      button {
+        height: 36px;
+      }
+    }
+    @include mq(768px) {
+      height: 100%;
+      overflow-y: auto;
+      @include webkit;
+    }
+
+    .rdrDateRangePickerWrapper {
+      background-color: white;
+
+      @include mq(768px) {
+      }
+    }
+  }
+}

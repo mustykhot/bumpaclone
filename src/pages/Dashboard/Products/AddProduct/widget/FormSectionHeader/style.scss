@@ -1,0 +1,25 @@
+@use "../../../../../../assets/styles/index" as *;
+.form_section_header {
+  width: 100%;
+  background: #f9fafb;
+  border-radius: 8px 8px 0px 0px;
+  margin-bottom: 24px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--grey01);
+    display: flex;
+    gap: 2px;
+    align-items: center;
+  }
+  button {
+    height: 36px;
+  }
+}

@@ -1,0 +1,94 @@
+@use "../../assets/styles/index" as *;
+
+.pd_line_chart_card {
+  min-width: 360px;
+  height: max-content;
+  border: 1px solid var(--grey05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 24px 16px;
+  width: 100%;
+  @include mq(768px) {
+    width: 100%;
+    min-width: unset;
+  }
+  .skeleton_box {
+    width: 100%;
+  }
+  .top_section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    .left_text_box {
+      .title {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--grey03);
+        &.large {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: var(--grey01);
+        }
+      }
+      .amount {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        color: var(--black02);
+      }
+    }
+    .right_text_box {
+      .date {
+        display: flex;
+        align-items: center;
+        span {
+          display: block;
+          height: 4px;
+          width: 8px;
+          border-radius: 20px;
+          background-color: var(--primary);
+        }
+        p {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          color: var(--grey01);
+          margin-left: 6px;
+        }
+        &.compare {
+          margin-top: 6px;
+          span {
+            background-color: var(--secondary);
+          }
+        }
+      }
+    }
+  }
+  .chart_box {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    @include webkit;
+    .apexcharts-zoomin-icon,
+    .apexcharts-zoomout-icon,
+    .apexcharts-zoom-icon,
+    .apexcharts-pan-icon,
+    .apexcharts-reset-icon {
+      display: none;
+    }
+    // .apexcharts-canvas {
+    //   min-width: 100%;
+    // }
+  }
+  .empty_record {
+    border-top: 1px solid var(--grey04);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 10px;
+    text-align: center;
+    color: var(--grey01);
+  }
+}

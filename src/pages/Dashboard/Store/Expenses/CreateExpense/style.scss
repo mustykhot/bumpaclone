@@ -1,0 +1,60 @@
+@use "../../../../../assets/styles/index" as *;
+.pd_createexpense {
+
+  .file-container{
+    height: 12rem;
+    margin-bottom: 3rem;
+
+  
+  }
+
+  .thumbnail_box{
+    height: 100%;
+    width: 100%;
+
+    img{
+      height: 100%;
+    }
+
+    .change_thumbnail {
+      label{
+      background: #EFF1F3;
+      color: #222D37;
+      border-radius: 20px;
+      padding: 8px 16px 8px 16px;
+      font-size: 14px;
+      border: none !important;
+      cursor: pointer;
+      }
+      margin-top: 1rem;
+
+    }
+  }
+  .pick_category {
+    @include pick_input_type;
+    margin-bottom: 16px;
+  }
+  .pd_select_category {
+    .category_list {
+      padding: 0 32px;
+      width: 100%;
+      .single_category {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--grey05);
+      }
+    }
+
+   
+
+    .category_radio{
+    
+     &  .MuiFormGroup-root  {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@use "../../assets/styles/index" as *;
+.pd_view_bank_details {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  .cover_all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white);
+    max-width: 500px;
+    width: 90%;
+    padding: 40px 24px;
+    border-radius: 16px;
+  }
+  p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .number_side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}

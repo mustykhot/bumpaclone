@@ -1,0 +1,43 @@
+@use "../../../../../assets/styles/index" as *;
+
+.pd_messages_analytics {
+  .left_section {
+    .line_card_flex_container {
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      .pd_line_chart_card {
+        width: 48%;
+        @include mq(1200px) {
+          width: 100%;
+          min-width: unset;
+        }
+      }
+    }
+  }
+  .right_section {
+    .top_selling_product {
+      @include dashboard_card;
+      padding: 24px;
+      min-width: 360px;
+      height: max-content;
+      width: 100%;
+      margin-bottom: 24px;
+      h3 {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--grey03);
+        margin-bottom: 20px;
+      }
+      .top_product {
+        @include top_selling_product;
+      }
+      .top_collection {
+        @include top_collection;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../../assets/styles/index" as *;
+.pd_dashboardlayout {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  border: 1px solid var(--grey04);
+
+  @include mq(1920px) {
+    border: none;
+  }
+  .outlet_container {
+    display: flex;
+    height: calc(100dvh - 71px);
+    @include mq(500px) {
+      height: calc(100dvh - 70px);
+    }
+    main {
+      flex-grow: 1;
+      height: 100%;
+      overflow-y: auto;
+      width: calc(100% - 254px);
+      background: white;
+      @include webkit;
+      @include mq(1100px) {
+        width: 100%;
+      }
+    }
+  }
+}

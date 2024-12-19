@@ -1,0 +1,14 @@
+@use "../../../../assets/styles/index" as *;
+
+ .create-product-modal-bottom {
+    .pd-modal_bottom {
+        @include mq(767px) {
+        margin-top: 2rem;
+        }
+    
+
+      .popBox {
+        padding-bottom: 0px !important;
+        border: none;
+      }
+    }}

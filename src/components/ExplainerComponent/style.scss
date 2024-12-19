@@ -1,0 +1,16 @@
+@use "../../assets/styles/index" as *;
+.pd_explainer_component {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  svg {
+    flex-shrink: 0;
+  }
+  p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--grey02);
+  }
+}

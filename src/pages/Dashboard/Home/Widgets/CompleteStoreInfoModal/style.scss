@@ -1,0 +1,9 @@
+@use "../../../../../assets/styles/index" as *;
+
+.complete_store_modal {
+  overflow-y: auto;
+  max-height: 100dvh;
+  height: 100%;
+  width: 100%;
+  @include webkit;
+}

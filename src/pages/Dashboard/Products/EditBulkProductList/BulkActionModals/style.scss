@@ -1,0 +1,170 @@
+@use "../../../../../assets/styles/index" as *;
+.bulk_input_on_button {
+  padding-right: 0 !important;
+  .last_button {
+    background-color: var(--pastelGreen);
+    padding: 15px;
+    height: 100%;
+  }
+}
+.change_value_container {
+  @include white_modal_box;
+  max-width: 590px;
+
+  .title_section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey04);
+    align-items: center;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    h6 {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: var(---black02);
+    }
+    .btn_flex {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      @include mq(370px) {
+        width: 100%;
+      }
+      button {
+        width: 140px;
+        background-color: var(--grey04);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--white);
+        @include mq(370px) {
+          width: 100%;
+        }
+        &.active {
+          color: var(--primary);
+          background-color: var(--pastelGreen);
+        }
+      }
+    }
+  }
+  .form_section {
+    margin-top: 16px;
+    width: 100%;
+    .btn_flex {
+      width: 100%;
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 8px;
+      button {
+        width: 48%;
+        @include mq(768px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.variation_editor_box {
+  .related_product_flex {
+  }
+  .related_product_flex.variant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .left_container {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 12px;
+        width: 40px;
+        height: 40px;
+      }
+      .text_side {
+   word-break: break-all;
+      }
+    }
+    .right_container {
+      flex-grow: unset !important;
+      margin: 0 !important;
+      flex-direction: unset;
+      width: unset !important;
+      .form-group-wrapper {
+        flex-grow: unset;
+        width: 150px;
+
+        @include mq(767px) {
+          width: 100px;
+        }
+
+        &.price_input {
+          width: 120px;
+        }
+        .form-group {
+          height: 40px;
+        }
+      }
+    }
+  }
+  .bulk_increase {
+    padding: 0 32px;
+    border-bottom: 1px solid var(--grey05);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    .button_cover {
+      p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+        color: var(---black02);
+      }
+    }
+    .btn_flex {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--grey05);
+      margin-bottom: 16px;
+      @include mq(370px) {
+        width: 100%;
+      }
+      button {
+        width: 48%;
+        gap: 8px;
+        height: 44px;
+        background-color: var(--grey04);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--white);
+        @include mq(370px) {
+          width: 100%;
+        }
+        &.active {
+          color: var(--primary);
+          background-color: var(--pastelGreen);
+        }
+      }
+    }
+    .text_p {
+      margin-bottom: 10px;
+    }
+    .form-group-wrapper {
+      .form-group {
+        height: 48px;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@use "../../../assets/styles/index" as *;
+.pd_discounts {
+  @include auto_layout;
+  .discounts_container {
+    .title_section {
+      @include dashboard_title_section;
+    }
+  }
+  .empty_wrapper {
+    width: 100%;
+    padding: 90px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    margin-bottom: 40px;
+    @include mq(768px) {
+      padding: 60px 10px;
+    }
+  }
+}

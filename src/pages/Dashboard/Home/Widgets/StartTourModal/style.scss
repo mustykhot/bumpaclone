@@ -1,0 +1,21 @@
+@use "../../../../../assets/styles/index" as *;
+
+.tour_modal {
+  img {
+    margin-top: 60px !important;
+    width: 230px;
+    height: 230px;
+    @include mq(600px) {
+      width: 130px;
+      height: 130px;
+      margin-top: 20px !important;
+    }
+  }
+  .button_container {
+    margin-top: 24px;
+    margin-bottom: 0 !important;
+    .skip_btn {
+      margin-top: 16px;
+    }
+  }
+}

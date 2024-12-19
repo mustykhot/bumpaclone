@@ -1,0 +1,60 @@
+@use "../../../../assets/styles/index" as *;
+.pd_view_invoice_modal_box {
+  .empty-response-pg {
+    margin-top: 50px !important;
+  }
+  .single_loading_box {
+    .right_box {
+      width: 100% !important;
+    }
+  }
+  .top_section {
+    .note_explainer {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      color: var(--grey01);
+    }
+    .displayList {
+      cursor: pointer;
+      .single_invoice_note {
+        border-radius: 8px;
+        background: #f9fafb;
+        padding: 16px;
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .note_title {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+          justify-content: space-between;
+          p {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            color: var(--grey01);
+          }
+          .icon_flex {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            button {
+              padding: 0;
+            }
+          }
+        }
+        p.note_description {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          color: var(--black02);
+        }
+      }
+    }
+  }
+}

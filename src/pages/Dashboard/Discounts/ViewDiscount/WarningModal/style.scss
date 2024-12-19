@@ -1,0 +1,63 @@
+@use "../../../../../assets/styles/index" as *;
+
+.warning_modal {
+  @include white_modal_box;
+  max-width: 500px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .cancel_section {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--black);
+    text-align: center;
+    margin: 24px 0 16px;
+  }
+  .description {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .button_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    button {
+      height: 44px;
+      width: 100%;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      &.cancel {
+        border: 1px solid #5c636d;
+        margin-top: 8px;
+        background-color: white;
+        color: var(--grey01);
+      }
+    }
+  }
+}
+
+// .warning_modal {
+//   .button_container {
+//     @include mq(600px) {
+//       margin-bottom: 10px !important;
+//     }
+//     button {
+//       width: 100%;
+//     }
+//   }
+// }
